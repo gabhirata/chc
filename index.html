@@ -9,10 +9,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body class="  helvetica">
-    <div class=" center w-90 w80-ns mw8-l debug">
+    <div class=" center w-90 w80-ns mw8-l sdebug">
         <header class="pa2 bb bw2 ma1 db">
             <nav class="  ">
                 <div class=" " id="logodiv">
@@ -55,7 +58,86 @@
             <p class="f6 f5-ns measure   lh-copy">
                 Nabil Bonduki Professor, Pesquisador da FAUUSP<br>[BONDUKI, 2014]
             </p>
+            <h2 class=" pt4">informações completas:</h2>
+               <ul class="helvetica">
+                   <li>
+                       <input type="checkbox" id="list-item-1">
+                       <label for="list-item-1" class=" bb first"><h1 class="di">A</h1> <h6 class="di fw6">PROJETO</h6></label>
+                       <ul class=" helvetica bl ">
+                           <li>
+                               <p class="f6 b mb1 pb0 pt2 mt0 tooltip">Data do Projeto
+                                   <span class=" shadow-3 tooltiptext f6 lh-solid fw3 lh-copy">ano de publicação do projeto</span>
+                               </p>
+                               <p class="f6 mt0 pt0 mb0 pt0 black-80">1946</p>
+                           </li>
+                           <li>
+                               <p class="f6 b mb1 pb0 pt2 mt0">Data de finalização da obra</p>
+                               <p class="f6 mt0 pt0 mb0 pt0 black-80">1950</p>
+                           </li>
+                           <li>
+                               <p class="f6 b mb1 pb0 pt2 mt0">Arquiteto/s</p>
+                               <p class="f6 mt0 pt0 mb0 pt0 black-80">Marcial Fleury de Oliveira</p>
+                           </li>
+                           <li>
+                               <p class="f6 b mb1 pb0 pt2 mt0">Cliente</p>
+                               <p class="f6 mt0 pt0 mb0 pt0 black-80">IAPB - Instituto de Aposentadoria e Pensão dos Bancários</p>
+                           </li>
+                           <li>
+                               <p class="f6 b mb1 pb0 pt2 mt0">Sistema de desenvolvimento</p>
+                               <p class="f6 mt0 pt0 mb0 pt0 black-80">Público - locação - Plano A do IAPB</p>
+                           </li>
+                           <li>
+                               <p class="f6 b mb1 pb0 pt2 mt0">Usuário</p>
+                               <p class="f6 mt0 pt0 mb0 pt0 black-80">Associados do IAPB</p>
+                           </li>
+                       </ul>
+                   </li>
+                   <li>
+                       <input type="checkbox" id="list-item-2">
+                       <label for="list-item-2" class=" bb first"><h1 class="di">B</h1> <h6 class="di fw6">LOCALIZAÇÃO</h6></label>
+                       <ul>
+                           <li>Open Sans</li>
+                           <li>Roboto</li>
+                           <li>Lato</li>
+                           <li>Stabo</li>
+                           <li>Oswald</li>
+                       </ul>
+                   </li>
+                   <li>
+                       <input type="checkbox" id="list-item-3">
+                       <label for="list-item-3" class=" bb first"><h1 class="di">C</h1> <h6 class="di fw6">EDIFÍCIO</h6></label>
+                       <ul>
+                           <li>Inconsolata</li>
+                           <li>Source Code Pro</li>
+                           <li>Droid Sans Mono</li>
+                           <li>Ubuntu Mono</li>
+                           <li>Cousine</li>
+                       </ul>
+                   </li>
+                   <li>
+                       <input type="checkbox" id="list-item-4">
+                       <label for="list-item-4" class=" bb first"><h1 class="di">D</h1> <h6 class="di fw6">TIPOS DE HABITAÇÃO</h6></label>
+                       <ul>
+                           <li>Inconsolata</li>
+                           <li>Source Code Pro</li>
+                           <li>Droid Sans Mono</li>
+                           <li>Ubuntu Mono</li>
+                           <li>Cousine</li>
+                       </ul>
+                       <div class="center pv5" id='map' style='width: ; height: 500px;'></div>
+                        <script>
+                            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
+                            var map = new mapboxgl.Map({
+                                container: 'map',
+                                style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
+                            });
+                        </script>
+
+                   </li>
+               </ul>
+
         </div>
+
     </div>
 </body>
 
