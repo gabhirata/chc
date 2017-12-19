@@ -10,133 +10,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/tachyons.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 
-<body class="  helvetica">
-    <div class=" center w-90 w80-ns mw8-l sdebug">
-        <header class="pa2 bb bw2 ma1 db">
-            <nav class="  ">
+<body class="  helvetica bg-white">
+    <div class=" center w-100 cf sdebug-grid-16">
+        <header class="mw8-l  center-l mh3 pa3 bb bw2 db">
+            <nav class=" mh5-l ">
                 <div class=" " id="logodiv">
-                    <a id="logo" class="link dim black b f4 dib mr3" href="#" title="Home">cadernos de habitação coletiva</a>
+                    <a id="logo" class="link hover-purple black b f4 dib mr3" href="#" title="Home">cadernos de habitação coletiva</a>
                     <div class="mt2 dib f4">
-                        <a class="link dim gray dib mr3" href="#" title="Home">sobre</a>
-                        <a class="link dim gray dib mr3" href="#" title="About">buscar</a>
-                        <a class="link dim gray dib mr3" href="#" title="Store">todos</a>
-                        <a class="link dim gray dib" href="#" title="Contact">contato</a>
+                        <a class="link hover-purple gray dib mr3" href="#" title="Home">sobre</a>
+                        <a class="link hover-purple gray dib mr3" href="#" title="About">buscar</a>
+                        <a class="link hover-purple gray dib mr3" href="#" title="Store">todos</a>
+                        <a class="link hover-purple gray dib" href="#" title="Contact">contato</a>
                     </div>
                 </div>
             </nav>
         </header>
-        <h1 class=" tracked ttu fw3 pv3">conjunto residencial santa cruz</h1>
-        <div class=" pa3 fr georgia black-80 ">
-            <h3 class=" helvetica black">sobre:</h3>
-            <p class="f6 f5-ns measure   lh-copy">
-                O conjunto localiza-se na Rua Santa Cruz, na Vila Mariana, próximo da Casa Modernista de Gregori Warchavchik, e é composto de 23 blocos com três pavimentos implantados em uma gleba triangular de 61,9 mil m2.
-            </p>
-            <p class="f6 f5-ns measure   lh-copy">
-                A maioria dos blocos foi disposta com as fachadas voltadas para a direção leste-oeste e com uma distância que permite a insolação dos apartamentos. A despeito da homogeneidade, a dimensão do conjunto e a exuberante arborização criam um ambiente diversificado
-                e estimulante. A gleba é cortada por uma rua principal, mais larga do que as vias locais de acesso aos blocos, formando quadras compridas. Entre os blocos foram implantadas áreas verdes, permeadas por vias de pedestres. As construções
-                se diluem na vegetação, conferindo ao local uma qualidade ambiental equivalente a de um parque urbano. O conjunto foi equipado com cooperativa de consumo, ambulatório médico e clube.
-            </p>
-            <p class="f6 f5-ns measure   lh-copy">
-                A implantação regular com edifícios padronizados, em meios a áreas verdes e alamedas arborizadas, remete à experiência das Siedlungen frankfurtianas (1924-1929), que associou a racionalização construtiva, da nova objetividade alemã, aos princípios urbanísticos
-                das cidades-jardins, criando um novo modelo de organização espacial para os conjuntos residenciais.
-            </p>
-            <p class="f6 f5-ns measure   lh-copy">
-                Apesar da modernidade do plano urbanístico, o bloco ainda tem uma linguagem híbrida, com alguns componentes construtivos tradicionais, como telhado e janelas tipo veneziana, combinados com elementos tipicamente modernos, presentes na entrada e na coluna
-                de escada, marcada por linhas geométricas e pelos cobogós, que fecham as áreas de serviço.
-            </p>
-            <p class="f6 f5-ns measure   lh-copy">
-                O módulo gerador do bloco é formado por uma coluna de escada e dois apartamentos. Para se adaptar ao formato triangular da gleba, os edifícios têm comprimentos variados, utilizando de um a seis módulos. Os apartamentos têm três quartos e, segundo relato
-                dos moradores, foram alugados originalmente com equipamentos domésticos, como chuveiro, fogão, etc.
-            </p>
-            <p class="f6 f5-ns measure   lh-copy">
-                Setecentas famílias inscreveram-se para os 282 apartamentos construídos; uma comissão formada por representantes do sindicato e uma assistente social do IAPB sorteavam as famílias que seriam entrevistadas para avaliar se podiam arcar com o aluguel.
-            </p>
-            <p class="f6 f5-ns measure   lh-copy">
-                Nabil Bonduki Professor, Pesquisador da FAUUSP<br>[BONDUKI, 2014]
-            </p>
-            <h2 class=" pt4">informações completas:</h2>
-               <ul class="helvetica">
-                   <li>
-                       <input type="checkbox" id="list-item-1">
-                       <label for="list-item-1" class=" bb first"><h1 class="di">A</h1> <h6 class="di fw6">PROJETO</h6></label>
-                       <ul class=" helvetica bl ">
-                           <li>
-                               <p class="f6 b mb1 pb0 pt2 mt0 tooltip">Data do Projeto
-                                   <span class=" shadow-3 tooltiptext f6 lh-solid fw3 lh-copy">ano de publicação do projeto</span>
-                               </p>
-                               <p class="f6 mt0 pt0 mb0 pt0 black-80">1946</p>
-                           </li>
-                           <li>
-                               <p class="f6 b mb1 pb0 pt2 mt0">Data de finalização da obra</p>
-                               <p class="f6 mt0 pt0 mb0 pt0 black-80">1950</p>
-                           </li>
-                           <li>
-                               <p class="f6 b mb1 pb0 pt2 mt0">Arquiteto/s</p>
-                               <p class="f6 mt0 pt0 mb0 pt0 black-80">Marcial Fleury de Oliveira</p>
-                           </li>
-                           <li>
-                               <p class="f6 b mb1 pb0 pt2 mt0">Cliente</p>
-                               <p class="f6 mt0 pt0 mb0 pt0 black-80">IAPB - Instituto de Aposentadoria e Pensão dos Bancários</p>
-                           </li>
-                           <li>
-                               <p class="f6 b mb1 pb0 pt2 mt0">Sistema de desenvolvimento</p>
-                               <p class="f6 mt0 pt0 mb0 pt0 black-80">Público - locação - Plano A do IAPB</p>
-                           </li>
-                           <li>
-                               <p class="f6 b mb1 pb0 pt2 mt0">Usuário</p>
-                               <p class="f6 mt0 pt0 mb0 pt0 black-80">Associados do IAPB</p>
-                           </li>
-                       </ul>
-                   </li>
-                   <li>
-                       <input type="checkbox" id="list-item-2">
-                       <label for="list-item-2" class=" bb first"><h1 class="di">B</h1> <h6 class="di fw6">LOCALIZAÇÃO</h6></label>
-                       <ul>
-                           <li>Open Sans</li>
-                           <li>Roboto</li>
-                           <li>Lato</li>
-                           <li>Stabo</li>
-                           <li>Oswald</li>
-                       </ul>
-                   </li>
-                   <li>
-                       <input type="checkbox" id="list-item-3">
-                       <label for="list-item-3" class=" bb first"><h1 class="di">C</h1> <h6 class="di fw6">EDIFÍCIO</h6></label>
-                       <ul>
-                           <li>Inconsolata</li>
-                           <li>Source Code Pro</li>
-                           <li>Droid Sans Mono</li>
-                           <li>Ubuntu Mono</li>
-                           <li>Cousine</li>
-                       </ul>
-                   </li>
-                   <li>
-                       <input type="checkbox" id="list-item-4">
-                       <label for="list-item-4" class=" bb first"><h1 class="di">D</h1> <h6 class="di fw6">TIPOS DE HABITAÇÃO</h6></label>
-                       <ul>
-                           <li>Inconsolata</li>
-                           <li>Source Code Pro</li>
-                           <li>Droid Sans Mono</li>
-                           <li>Ubuntu Mono</li>
-                           <li>Cousine</li>
-                       </ul>
-                       <div class="center pv5" id='map' style='width: ; height: 500px;'></div>
+        <h1 class=" mw7-l center-l mh5-l mh4-m mh3 tracked ttu f2 f1-ns fw3 pv3">conjunto residencial santa cruz</h1>
+        <div class="mw9 center ph0">
+            <div class="cf mh3 ph0">
+                <div class=" dn db-l fl w-100 w-30-l pv2 r2-l">
+                    <div class=""></div>
+                    <ul class="pa2 fr">
+                        <li>segunda</li>
+                        <li>segunda</li>
+                        <li>segunda</li>
+                        <li>segunda</li>
+                        <li>segunda</li>
+                    </ul>
+                </div>
+                <div class=" fr w-100 w-70-l pv2 pl2-l">
+                    <div class=" cf">
+                        <div class=" pa3-l ph3-m mw7 georgia black-80 fl-l fr ">
+                            <img src="santacruz.png" class=" mw-100" alt="night sky over water">
+                            <h3 class=" helvetica black mv3">sobre:</h3>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                O conjunto localiza-se na Rua Santa Cruz, na Vila Mariana, próximo da Casa Modernista de Gregori Warchavchik, e é composto de 23 blocos com três pavimentos implantados em uma gleba triangular de 61,9 mil m2.
+                            </p>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                A maioria dos blocos foi disposta com as fachadas voltadas para a direção leste-oeste e com uma distância que permite a insolação dos apartamentos. A despeito da homogeneidade, a dimensão do conjunto e a exuberante arborização criam um ambiente diversificado e estimulante. A gleba é cortada por uma rua principal, mais larga do que as vias locais de acesso aos blocos, formando quadras compridas. Entre os blocos foram implantadas áreas verdes, permeadas por vias de pedestres. As construções se diluem na vegetação, conferindo ao local uma qualidade ambiental equivalente a de um parque urbano. O conjunto foi equipado com cooperativa de consumo, ambulatório médico e clube.
+                            </p>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                A implantação regular com edifícios padronizados, em meios a áreas verdes e alamedas arborizadas, remete à experiência das Siedlungen frankfurtianas (1924-1929), que associou a racionalização construtiva, da nova objetividade alemã, aos princípios urbanísticos das cidades-jardins, criando um novo modelo de organização espacial para os conjuntos residenciais.
+                            </p>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                Apesar da modernidade do plano urbanístico, o bloco ainda tem uma linguagem híbrida, com alguns componentes construtivos tradicionais, como telhado e janelas tipo veneziana, combinados com elementos tipicamente modernos, presentes na entrada e na coluna de escada, marcada por linhas geométricas e pelos cobogós, que fecham as áreas de serviço.
+                            </p>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                O módulo gerador do bloco é formado por uma coluna de escada e dois apartamentos. Para se adaptar ao formato triangular da gleba, os edifícios têm comprimentos variados, utilizando de um a seis módulos. Os apartamentos têm três quartos e, segundo relato dos moradores, foram alugados originalmente com equipamentos domésticos, como chuveiro, fogão, etc.
+                            </p>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                Setecentas famílias inscreveram-se para os 282 apartamentos construídos; uma comissão formada por representantes do sindicato e uma assistente social do IAPB sorteavam as famílias que seriam entrevistadas para avaliar se podiam arcar com o aluguel.
+                            </p>
+                            <p class="f6 f5-ns measure   lh-copy">
+                                Nabil Bonduki Professor, Pesquisador da FAUUSP<br>[BONDUKI, 2014]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" db pa3 w-100 bg-black-10 w3">
+            <img src="santacruz.png" class="  mw6 " alt="night sky over water">
+        </div>
+        <div class="cf">
+            <div class=" fr pa3 mw6 cf georgia black-80 ">
+                <h2 class=" pt4">informações completas:</h2>
+                <ul class="helvetica ">
+                    <li class="">
+                        <input type="checkbox" id="list-item-1">
+                        <label for="list-item-1" class=" hover-bg-purple hover-white bb first"><h1 class="di">A</h1> <h6 class="di fw6">PROJETO</h6></label>
+                        <ul class="helvetica bl ">
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0 tooltip">Data do Projeto
+                                    <span class=" shadow-3 tooltiptext f6 lh-solid fw3 lh-copy">ano de publicação do projeto</span>
+                                </p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">1946</p>
+                            </li >
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Data de finalização da obra</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">1950</p>
+                            </li >
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Arquiteto/s</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Marcial Fleury de Oliveira</p>
+                            </li>
+                            <li class="collapsable" >
+                                <p class="f6 b mb1 pb0 pt2 mt0">Cliente</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">IAPB - Instituto de Aposentadoria e Pensão dos Bancários</p>
+                            </li>
+                            <li class="collapsable" >
+                                <p class="f6 b mb1 pb0 pt2 mt0">Sistema de desenvolvimento</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Público - locação - Plano A do IAPB</p>
+                            </li>
+                            <li class="collapsable" >
+                                <p class="f6 b mb1 pb0 pt2 mt0">Usuário</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Associados do IAPB</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="list-item-2">
+                        <label for="list-item-2" class=" bb first"><h1 class="di">B</h1> <h6 class="di fw6">LOCALIZAÇÃO</h6></label>
+                        <ul>
+                            <li>Open Sans</li>
+                            <li>Roboto</li>
+                            <li>Lato</li>
+                            <li>Stabo</li>
+                            <li>Oswald</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="list-item-3">
+                        <label for="list-item-3" class=" bb first"><h1 class="di">C</h1> <h6 class="di fw6">EDIFÍCIO</h6></label>
+                        <ul>
+                            <li>Inconsolata</li>
+                            <li>Source Code Pro</li>
+                            <li>Droid Sans Mono</li>
+                            <li>Ubuntu Mono</li>
+                            <li>Cousine</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="list-item-4">
+                        <label for="list-item-4" class=" bb first"><h1 class="di">D</h1> <h6 class="di fw6">TIPOS DE HABITAÇÃO</h6></label>
+                        <ul>
+                            <li>Inconsolata</li>
+                            <li>Source Code Pro</li>
+                            <li>Droid Sans Mono</li>
+                            <li>Ubuntu Mono</li>
+                            <li>Cousine</li>
+                        </ul>
+                        <div class="center pv5" id="map" style="width: ; height: 500px;"></div>
                         <script>
                             mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
                             var map = new mapboxgl.Map({
                                 container: 'map',
                                 style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
                             });
+
                         </script>
 
-                   </li>
-               </ul>
+                    </li>
+                </ul>
 
+            </div>
         </div>
+        <footer class="mt5 bg-black white h4">
+            <h3 class="pa4 tc fw4">fau usp 2017</h3>
+        </footer>
 
     </div>
 </body>

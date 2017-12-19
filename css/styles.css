@@ -7,20 +7,22 @@ ul {
 label {
     display: block;
     cursor: pointer;
-    padding: 10px;
+    padding: 1em;
     border: 1px solid #fff;
     border-bottom: none;
 }
 
+/*
 label:hover {
     background: #dcdcdc;
 }
+*/
 
 label.last {
     border-bottom: 1px solid #fff;
 }
 
-ul ul li {
+.collapsable {
     padding: 0.5em;
     /*   background: white; */
 }
@@ -47,15 +49,13 @@ input[type="checkbox"]:checked + label {
     /*   background: #e5e5e5; */
     border-bottom: 1px solid white;
     border-left: 1px solid #000000;
+    background-color: #5e2ca5;
+    color: white;
     }
 
     /* Tooltip container */
 
-
-
-
-
-    . tooltip {
+.tooltip {
         position: relative;
         display: inline-block;
         border-bottom: 1px dotted gray;
