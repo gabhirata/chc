@@ -85,3 +85,8 @@ input[type="checkbox"]:checked + label {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.list {
+    height: 100%;
+    
+}
