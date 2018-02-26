@@ -45,7 +45,7 @@ h1, p {
     max-height: 400px;
 }
 
-@media screen and (min-width: 976px) {
+@media screen and (min-width: 960px) {
 
   /* no grid support? */
   .sidebar {
