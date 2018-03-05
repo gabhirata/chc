@@ -253,3 +253,9 @@ li {
 a {
     text-decoration: none
 }
+
+.mauto {
+    display: block;
+    margin: auto;
+    width: 300px;
+}
