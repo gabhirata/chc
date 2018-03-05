@@ -28,23 +28,19 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 
-<body class="mw8-l mw7-ns center debugs debug-grids helvetica black-90  ">
-    <div class=" bg-white-90 sticky?">
-        <div>
-            <div class="mh2 d helvetica b--black-80 pa3 bb border bw1  ">
-                <nav class=" mh5-l mh4-ns mw8-l center-l ">
-                    <div class=" " id="logodiv">
-                        <a id="logo" class="link hover-purple black-80 b f4 dib mr3" href="#" title="Home">cadernos de habitação coletiva</a>
-                        <div class="mt2 dib f5 fw6">
-                            <a class="link hover-purple gray dib mr3" href="#" title="Home">sobre</a>
-                            <a class="link hover-purple gray dib mr3" href="index5.html" title="About">buscar</a>
-                            <a class="link hover-purple gray dib mr3" href="#" title="Store">todos</a>
-                            <a class="link hover-purple gray dib" href="#" title="Contact">contato</a>
-                        </div>
-                    </div>
-                </nav>
+<body class="mw8-l mw7-ns center debugs debug-grids helvetica black-80  ">
+    <div class="mh2 d helvetica b--black-80 pa3 bb border bw1  ">
+        <nav class=" mh5-l mh4-ns mw8-l center-l ">
+            <div class=" " id="logodiv">
+                <a id="logo" class="link hover-purple black-80 b f4 dib mr3" href="#" title="Home">cadernos de habitação coletiva</a>
+                <div class="mt2 dib f5 fw6">
+                    <a class="link hover-purple gray dib mr3" href="#" title="Home">sobre</a>
+                    <a class="link hover-purple gray dib mr3" href="index5.html" title="About">buscar</a>
+                    <a class="link hover-purple gray dib mr3" href="#" title="Store">todos</a>
+                    <a class="link hover-purple gray dib" href="#" title="Contact">contato</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </div>
     <div class="wrapper mw8 georgia">
         <header class="header ph3 pv3 pv4-ns ">
@@ -52,30 +48,30 @@
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">Comissão Técnica do Instituto de Aposentadoria e Pensões dos Bancários</h4>
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">São Paulo, 1946 – 1950</h4>
         </header>
-        <aside class="sidebar b--black-50 ">
-            <ul class="list sidestuff mv0 pa2 fr helvetica sticky2 ">
+        <aside class="sidebar   b--black-50">
+            <ul class="list sidestuff mv3 pa2 fr helvetica ">
                 <li>
-                    <a href="#texto" class="black bb bw1 fw5 dib w5 pa2 link hover-purple">texto</a>
+                    <a href="#texto" class="black bb dib w5 pa2 link hover-bg-purple hover-white">texto</a>
                 </li>
                 <li>
-                    <a href="#desenhos" class="black bb bw1 fw5 dib w5 pa2 link hover-purple">desenhos</a></li>
+                    <a href="#desenhos" class="black bb dib w5 pa2  link hover-bg-purple hover-white">desenhos</a></li>
                 <li>
-                    <a href="#informacoes" class="black bb bw1 fw5 dib w5 pa2 link hover-purple">informações completas</a>
+                    <a href="#informacoes" class="black bb dib w5 pa2  link hover-bg-purple hover-white">informações completas</a>
                 </li>
                 <li>
-                    <a href="#localizacao" class="black bb bw1 fw5 dib w5 pa2 link hover-purple">localização</a>
+                    <a href="#localizacao" class="black bb dib w5 pa2  link hover-bg-purple hover-white">localização</a>
                 </li>
                 <li>
-                    <a href="#downloads" class="black bb bw1 fw5 dib w5 pa2 link hover-purple">downloads</a>
+                    <a href="#downloads" class="black bb dib w5 pa2  link hover-bg-purple hover-white">downloads</a>
                 </li>
 
             </ul>
 
         </aside>
-        <article class="content pa3 bl-l b--black-20 pl4-ns pt2  ">
-            <div class="ml4-ns ml0-l ">
+        <article class="content pa3 ">
+            <div class="ml4-ns ml0-l">
                 <img src="santacruz.png" class="mw-100 mw6-ns" alt="night sky over water">
-                <h2 id="texto" class="f4 pt4 mv3"> texto:</h2>
+                <h2 id="texto" class="f4 mv3"> texto:</h2>
                 <p class="f6 f5-ns measure  fw lh-copy">
                     O conjunto localiza-se na Rua Santa Cruz, na Vila Mariana, próximo da Casa Modernista de Gregori Warchavchik, e é composto de 23 blocos com três pavimentos implantados em uma gleba triangular de 61,9 mil m2.
                 </p>
@@ -290,7 +286,7 @@
 
     </script>
 
-
+   
 </body>
 
 </html>

@@ -203,3 +203,23 @@ li {
     color: #5e2ca5;
     border-color: #5e2ca5;
 }
+
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.blur {
+    -webkit-filter: blur(35px); /* Safari */
+    filter: blur(35px);
+    opacity: 0.90;
+    background-color: white;
+    z-index: -1;
+}
+
+.sticky2 {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 4rem;
+}
