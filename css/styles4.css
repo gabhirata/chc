@@ -223,3 +223,15 @@ li {
     position: sticky;
     top: 4rem;
 }
+
+.card {
+    display: inline-block;
+    width: 136px;
+    height: 224px;
+    background-color: #5e2ca5;
+    background-image: url("slice1.png");
+}
+
+.tt {
+    margin: auto;
+}
