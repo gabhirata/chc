@@ -228,10 +228,28 @@ li {
     display: inline-block;
     width: 136px;
     height: 224px;
-    background-color: #5e2ca5;
+/*    background-color: #5e2ca5;*/
     background-image: url("slice1.png");
+/*    background-color: beige;*/
 }
 
-.tt {
-    margin: auto;
+.ph {
+    width: 132px;
+    height: 128px;
+    background-color: white;
+}
+/*
+.placeholder2 {
+    height: 90px;
+    background-color: red;
+
+}
+
+.placeholder3 {
+    vertical-align: middle
+}
+*/
+
+a {
+    text-decoration: none
 }
