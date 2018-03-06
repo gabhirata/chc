@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="wrapper mw8 georgia">
+    <div class="wrapper mw8 debug georgia">
         <header class="header ph3 pv3 pv4-ns ">
             <h1 class="ml5-l ml4-ns f3 f2-ns mb2 helvetica">Buscar</h1>
             <!--
@@ -106,8 +106,8 @@
 
         </div>
 
-        <div class=" pa1 mauto">
-            <div class="flex flex-wrap bl-l filtr-container">
+        <div class="ph1 mauto">
+            <div class="filtr-container">
                 <div class="pa1 pa2-ns filtr-item" data-category="1, 5" data-sort="Busy streets">
                     <div class="= card ba bw1 b--black-10 hover_purple">
                         <a href="index4.html">
@@ -380,11 +380,12 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="demo/jquery.filterizr.min.js"></script>
-    <script src="demo/controls.js"></script>
+<!--    <script src="demo/controls.js"></script>-->
     <script>
         $(function() {
             var f = $('.filtr-container').filterizr({
-                controlsSelector: '.fltr-controls'
+                controlsSelector: '.fltr-controls',
+                layout: 'packed'
             });
             //            $('.color-container-1').filterizr({
             //                controlsSelector: '.color-controls-1'
@@ -411,8 +412,9 @@
             //            });
             window.filterizr = f;
             fltr.filterizr('setOptions', {
-                layout: 'sameSize'
+                
             });
+            
         });
 
     </script>

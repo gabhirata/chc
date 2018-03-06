@@ -205,21 +205,16 @@ li {
 }
 
 .sticky {
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     top: 0;
 }
 
-.blur {
-    -webkit-filter: blur(35px); /* Safari */
-    filter: blur(35px);
-    opacity: 0.90;
-    background-color: white;
-    z-index: -1;
-}
 
 .sticky2 {
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     top: 4rem;
 }
@@ -228,9 +223,9 @@ li {
     display: inline-block;
     width: 136px;
     height: 224px;
-/*    background-color: #5e2ca5;*/
+    /*    background-color: #5e2ca5;*/
     background-image: url("slice1.png");
-/*    background-color: beige;*/
+    /*    background-color: beige;*/
 }
 
 .ph {
@@ -238,6 +233,7 @@ li {
     height: 128px;
     background-color: white;
 }
+
 /*
 .placeholder2 {
     height: 90px;
@@ -255,7 +251,32 @@ a {
 }
 
 .mauto {
-    display: block;
     margin: auto;
-    width: 300px;
 }
+
+@media screen and (min-width: 23em) {
+    .mauto {
+        width: 340px;
+        margin: auto;
+    }
+    .filtr-item {
+        padding: 0.75rem;
+    }
+    }
+@media screen and (min-width: 30em) {
+    .mauto {
+        width: 490px;
+        margin: auto;
+    }
+    .filtr-item {
+        padding: 0.75rem;
+    }
+    }
+@media screen and (min-width: 40em) {
+    .mauto {
+        width: 648px;
+        margin: auto;
+    }
+    }
+
+
