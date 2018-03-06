@@ -280,3 +280,30 @@ a {
     }
 
 
+
+.high {
+    height: 60em
+}
+
+.button {
+    cursor: pointer
+}
+
+.button:hover {
+    border-color: #5e2ca5;
+    text-decoration: underline;
+}
+
+/*
+.button:active {
+    color: white;
+    background-color: #5e2ca5;
+    border-color: #5e2ca5;    
+}
+*/
+.active {
+    color: white;
+    background-color: #5e2ca5;
+    border-color: #5e2ca5;
+}
+    

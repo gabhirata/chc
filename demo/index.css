@@ -5,9 +5,8 @@
 }
 .item-desc {
     background-color: rgba(0,0,0,0.5);
-    color: white;
+/*    color: white;*/
     position: absolute;
-    text-transform: uppercase;
     text-align: center;
     padding: 1rem;
     z-index: 1;
@@ -17,14 +16,15 @@
 }
 
 /* Filter controls */
+/*
 .simplefilter, .multifilter, .sortandshuffle, .search-row {
   padding-left: 0;
 }
+*/
 .simplefilter li, .multifilter li, .sortandshuffle li {
     color: white;
     cursor: pointer;
     display: inline-block;
-    text-transform: uppercase;
     padding: 1rem 2rem;
 }
 .simplefilter li {
@@ -33,8 +33,10 @@
 .simplefilter li.active {
     background-color: #212121;
 }
+/*
 .multifilter li {
     background-color: #4b9eff;
+*/
 }
 .multifilter li.active {
     background-color: #2265b4;
@@ -43,7 +45,7 @@
 /* Shuffle and sort controls */
 select {
     padding: 1rem 1rem;
-    text-transform: uppercase;
+
 }
 .sortandshuffle .shuffle-btn {
     background-color: #dec800;
@@ -58,7 +60,7 @@ select {
 /* Search control */
 .filtr-search {
     padding: 0.5rem;
-    text-transform: uppercase;
+
 }
 
 /* Colored divs */
