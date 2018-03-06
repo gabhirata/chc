@@ -294,13 +294,11 @@ a {
     text-decoration: underline;
 }
 
-/*
 .button:active {
     color: white;
     background-color: #5e2ca5;
     border-color: #5e2ca5;    
 }
-*/
 .active {
     color: white;
     background-color: #5e2ca5;
