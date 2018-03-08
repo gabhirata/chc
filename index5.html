@@ -192,7 +192,10 @@
         $(function() {
             var f = $('.filtr-container').filterizr({
                 controlsSelector: '.fltr-controls',
-                layout: 'packed'
+                layout: 'packed',
+                animationDuration: 0.5,
+                easing: 'ease',
+                multifilterLogicalOperator: 'and',
             });
             window.filterizr = f;
             fltr.filterizr('setOptions', {
