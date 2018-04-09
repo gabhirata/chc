@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <!--    <meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
+    <title>cadernos habitação coletiva</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-lightbox.css">
+-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="css/smartphoto.min.css">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/styles4.css">
+
+    <!--
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="default-skin/default-skin.css">
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+-->
+
+</head>
+
+<body class="center debugs debug-grids helvetica black-90  ">
+    <div class="mw8-l  bg-white-90 sticky? center">
+        <div>
+            <div class="mh2 d helvetica b--black-80 pa3 bb border bw1  ">
+                <nav class=" mh5-l mh4-ns mw8-l center-l ">
+                    <div class=" " id="logodiv">
+                        <a id="logo" class="link hover-purple black-80 b f4 dib mr3" href="index5.html" title="Home">cadernos de habitação coletiva</a>
+                        <div class="mt2 dib f5 fw6">
+                            <a class="link hover-purple gray dib mr3" href="#" title="Home">sobre</a>
+                            <a class="link hover-purple gray dib mr3" href="index5.html" title="About">buscar</a>
+                            <a class="link hover-purple gray dib mr3" href="#" title="Store">todos</a>
+                            <a class="link hover-purple gray dib" href="#" title="Contact">contato</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="mw8 center georgia">
+        <header class="header ph3 pv3 pv4-ns ">
+            <h1 class="ml5-l ml4-ns f3 f2-ns mb2 helvetica">Mapa</h1>
+            <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">Todos os projetos, por localização.</h4>
+        </header>
+        <div class="w100 pa3 ph4">
+            <div id='map' style='width: auto; height: 36rem' class=""></div>
+        </div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
+            });
+            map.on('load', function() {
+                // Add a layer showing the places.
+                map.addLayer({
+                    "id": "places",
+                    "type": "symbol",
+                    "source": {
+                        "type": "geojson",
+                        "data": {
+                            "type": "FeatureCollection",
+                            "features": [{
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<div class='= card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/pauliceia.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Edifícios Pauliceia e São Carlos do Pinhal</h5><h5 class='georgia ma1 ml2 f7 black-60'>1952 - 1961</h5><h5 class=' dn'>Oscar Niemeyer Carlos Alberto Cerqueira Lemos</h5><h5 class=' dn'>sao são paulo</h5><h5 class=' dn'>privado mercado</h5><h5 class=' dn'>concreto</h5></div></div></a></div>",
+                                    "icon": "circle",
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-46.651250, -23.564778]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a <a href=\"http://madmens5finale.eventbrite.com/\" target=\"_blank\" title=\"Opens in a new window\">Mad Men Season Five Finale Watch Party</a>, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>",
+                                    "icon": "theatre"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.003168, 38.894651]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a <a href=\"http://tallulaeatbar.ticketleap.com/2012beachblanket/\" target=\"_blank\" title=\"Opens in a new window\">Big Backyard Beach Bash and Wine Fest</a> on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.grill hot dogs.</p>",
+                                    "icon": "bar"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.090372, 38.881189]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Ballston Arts & Crafts Market</strong><p>The <a href=\"http://ballstonarts-craftsmarket.blogspot.com/\" target=\"_blank\" title=\"Opens in a new window\">Ballston Arts & Crafts Market</a> sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>",
+                                    "icon": "art-gallery"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.111561, 38.882342]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Seersucker Bike Ride and Social</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year's <a href=\"http://dandiesandquaintrelles.com/2012/04/the-seersucker-social-is-set-for-june-9th-save-the-date-and-start-planning-your-look/\" target=\"_blank\" title=\"Opens in a new window\">Seersucker Social</a> bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>",
+                                    "icon": "bicycle"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.052477, 38.943951]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Capital Pride Parade</strong><p>The annual <a href=\"http://www.capitalpride.org/parade\" target=\"_blank\" title=\"Opens in a new window\">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>",
+                                    "icon": "star"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.043444, 38.909664]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist <a href=\"http://www.muhsinah.com\" target=\"_blank\" title=\"Opens in a new window\">Muhsinah</a> plays the <a href=\"http://www.blackcatdc.com\">Black Cat</a> (1811 14th Street NW) tonight with <a href=\"http://www.exitclov.com\" target=\"_blank\" title=\"Opens in a new window\">Exit Clov</a> and <a href=\"http://godsilla.bandcamp.com\" target=\"_blank\" title=\"Opens in a new window\">Gods’illa</a>. 9:00 p.m. $12.</p>",
+                                    "icon": "music"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.031706, 38.914581]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>A Little Night Music</strong><p>The Arlington Players' production of Stephen Sondheim's  <a href=\"http://www.thearlingtonplayers.org/drupal-6.20/node/4661/show\" target=\"_blank\" title=\"Opens in a new window\"><em>A Little Night Music</em></a> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>",
+                                    "icon": "music"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.020945, 38.878241]
+                                }
+                            }, {
+                                "type": "Feature",
+                                "properties": {
+                                    "description": "<strong>Truckeroo</strong><p><a href=\"http://www.truckeroodc.com/www/\" target=\"_blank\">Truckeroo</a> brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>",
+                                    "icon": "music"
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [-77.007481, 38.876516]
+                                }
+                            }]
+                        }
+                    },
+                    "layout": {
+                        "icon-image": "{icon}-15",
+                        "icon-allow-overlap": true,
+                    }
+                });
+
+                // When a click event occurs on a feature in the places layer, open a popup at the
+                // location of the feature, with description HTML from its properties.
+                map.on('click', 'places', function(e) {
+                    var coordinates = e.features[0].geometry.coordinates.slice();
+                    var description = e.features[0].properties.description;
+
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(description)
+                        .addTo(map);
+                });
+
+                // Change the cursor to a pointer when the mouse is over the places layer.
+                map.on('mouseenter', 'places', function() {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                // Change it back to a pointer when it leaves.
+                map.on('mouseleave', 'places', function() {
+                    map.getCanvas().style.cursor = '';
+                });
+            });
+
+        </script>
+
+
+        <!--
+        <aside class="sidebar b--black-50 ">
+            <ul class="list sidestuff mv0 pa2 fr helvetica sticky2 ">
+                <li>
+                    <a href="#texto" class="black-80 b--black-80 bb bw1 fw5 dib w5 pa2 link hover-purple">texto</a>
+                </li>
+                <li>
+                    <a href="#desenhos" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">desenhos</a></li>
+                <li>
+                    <a href="#informacoes" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">informações completas</a>
+                </li>
+                <li>
+                    <a href="#localizacao" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">localização</a>
+                </li>
+                <li>
+                    <a href="#downloads" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">downloads</a>
+                </li>
+
+            </ul>
+
+        </aside>
+        <article class="content pa3 bl-l b--black-20 pl4-ns pt2  ">
+            <div class="ml4-ns ml0-l ">
+                <img src="santacruz.png" class="mw-100 mw6-ns" alt="night sky over water">
+                <h2 id="texto" class="f4 pt4 mv3"> texto:</h2>
+                <p class="f6 f5-ns measure  fw lh-copy">
+                    O conjunto localiza-se na Rua Santa Cruz, na Vila Mariana, próximo da Casa Modernista de Gregori Warchavchik, e é composto de 23 blocos com três pavimentos implantados em uma gleba triangular de 61,9 mil m2.
+                </p>
+                <p class="f6 f5-ns measure   lh-copy">
+                    A maioria dos blocos foi disposta com as fachadas voltadas para a direção leste-oeste e com uma distância que permite a insolação dos apartamentos. A despeito da homogeneidade, a dimensão do conjunto e a exuberante arborização criam um ambiente diversificado e estimulante. A gleba é cortada por uma rua principal, mais larga do que as vias locais de acesso aos blocos, formando quadras compridas. Entre os blocos foram implantadas áreas verdes, permeadas por vias de pedestres. As construções se diluem na vegetação, conferindo ao local uma qualidade ambiental equivalente a de um parque urbano. O conjunto foi equipado com cooperativa de consumo, ambulatório médico e clube.
+                </p>
+                <p class="f6 f5-ns measure   lh-copy">
+                    A implantação regular com edifícios padronizados, em meios a áreas verdes e alamedas arborizadas, remete à experiência das Siedlungen frankfurtianas (1924-1929), que associou a racionalização construtiva, da nova objetividade alemã, aos princípios urbanísticos das cidades-jardins, criando um novo modelo de organização espacial para os conjuntos residenciais.
+                </p>
+                <p class="f6 f5-ns measure   lh-copy">
+                    Apesar da modernidade do plano urbanístico, o bloco ainda tem uma linguagem híbrida, com alguns componentes construtivos tradicionais, como telhado e janelas tipo veneziana, combinados com elementos tipicamente modernos, presentes na entrada e na coluna de escada, marcada por linhas geométricas e pelos cobogós, que fecham as áreas de serviço.
+                </p>
+                <p class="f6 f5-ns measure   lh-copy">
+                    O módulo gerador do bloco é formado por uma coluna de escada e dois apartamentos. Para se adaptar ao formato triangular da gleba, os edifícios têm comprimentos variados, utilizando de um a seis módulos. Os apartamentos têm três quartos e, segundo relato dos moradores, foram alugados originalmente com equipamentos domésticos, como chuveiro, fogão, etc.
+                </p>
+                <p class="f6 f5-ns measure   lh-copy">
+                    Setecentas famílias inscreveram-se para os 282 apartamentos construídos; uma comissão formada por representantes do sindicato e uma assistente social do IAPB sorteavam as famílias que seriam entrevistadas para avaliar se podiam arcar com o aluguel.
+                </p>
+                <p class="f6 f5-ns measure   lh-copy">
+                    Nabil Bonduki Professor, Pesquisador da FAUUSP<br>[BONDUKI, 2014]
+                </p>
+
+            </div>
+            <div class="ml4-ns ml0-l">
+                <h2 id="desenhos" class=" pt4">desenhos:</h2>
+                <div class="mw7">
+                    <h3 class=" pt3 ma2 black-60 db">implantações:</h3>
+                    <a href="imagens/1.png" class="js-img-viwer">
+                        <img src="imagens/1.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/2.png" class="js-img-viwer">
+                        <img src="imagens/2.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/3.png" class="js-img-viwer">
+                        <img src="imagens/3.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
+                    </a>
+                    <h3 class=" pt3 ma2 black-60 db">plantas:</h3>
+                    <a href="imagens/4.png" class="js-img-viwer">
+                        <img src="imagens/4.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/5.png" class="js-img-viwer">
+                        <img src="imagens/5.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/6.png" class="js-img-viwer">
+                        <img src="imagens/6.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/7.png" class="js-img-viwer">
+                        <img src="imagens/7.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <h3 class=" pt3 ma2 black-60 db">elevações:</h3>
+                    <a href="imagens/8.png" class="js-img-viwer">
+                        <img src="imagens/8.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/9.png" class="js-img-viwer">
+                        <img src="imagens/9.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/10.png" class="js-img-viwer">
+                        <img src="imagens/10.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
+                    </a>
+                    <h3 class=" pt3 ma2 black-60 db">cortes:</h3>
+                    <a href="imagens/11.png" class="js-img-viwer">
+                        <img src="imagens/11.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
+                    </a>
+                    <h3 class=" pt3 ma2 black-60 db">unidades:</h3>
+                    <a href="imagens/12.png" class="js-img-viwer">
+                        <img src="imagens/12.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/13.png" class="js-img-viwer">
+                        <img src="imagens/13.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/14.png" class="js-img-viwer">
+                        <img src="imagens/14.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/15.png" class="js-img-viwer">
+                        <img src="imagens/15.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/16.png" class="js-img-viwer">
+                        <img src="imagens/16.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/17.png" class="js-img-viwer">
+                        <img src="imagens/17.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/18.png" class="js-img-viwer">
+                        <img src="imagens/18.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/19.png" class="js-img-viwer">
+                        <img src="imagens/19.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/20.png" class="js-img-viwer">
+                        <img src="imagens/20.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+                    <a href="imagens/21.png" class="js-img-viwer">
+                        <img src="imagens/21.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
+                    </a>
+
+                </div>
+            </div>
+            <div class="ml4-ns ml0-l">
+                <h2 id="informacoes" class=" pt4">informações completas:</h2>
+                <ul class="helvetica pl0 mw6 ">
+                    <li class="">
+                        <input type="checkbox" id="list-item-1">
+                        <label for="list-item-1" class=" hover-bg-purple hover-white bb first"><h1 class="di">A</h1> <h6 class="di fw6">PROJETO</h6></label>
+                        <ul class="helvetica bl ">
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0 tooltip">Data do Projeto
+                                    <span class=" shadow-3 tooltiptext f6 lh-solid fw3 lh-copy">ano de publicação do projeto</span>
+                                </p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">1946</p>
+                            </li>
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Data de finalização da obra</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">1950</p>
+                            </li>
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Arquiteto/s</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Marcial Fleury de Oliveira</p>
+                            </li>
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Cliente</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">IAPB - Instituto de Aposentadoria e Pensão dos Bancários</p>
+                            </li>
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Sistema de desenvolvimento</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Público - locação - Plano A do IAPB</p>
+                            </li>
+                            <li class="collapsable">
+                                <p class="f6 b mb1 pb0 pt2 mt0">Usuário</p>
+                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Associados do IAPB</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="list-item-2">
+                        <label for="list-item-2" class="hover-bg-purple hover-white bb first"><h1 class="di">B</h1> <h6 class="di fw6">LOCALIZAÇÃO</h6></label>
+                        <ul>
+                            <li>Open Sans</li>
+                            <li>Roboto</li>
+                            <li>Lato</li>
+                            <li>Stabo</li>
+                            <li>Oswald</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="list-item-3">
+                        <label for="list-item-3" class="hover-bg-purple hover-white bb first"><h1 class="di">C</h1> <h6 class="di fw6">EDIFÍCIO</h6></label>
+                        <ul>
+                            <li>Inconsolata</li>
+                            <li>Source Code Pro</li>
+                            <li>Droid Sans Mono</li>
+                            <li>Ubuntu Mono</li>
+                            <li>Cousine</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="list-item-4">
+                        <label for="list-item-4" class="hover-bg-purple hover-white bb first"><h1 class="di">D</h1> <h6 class="di fw6">TIPOS DE HABITAÇÃO</h6></label>
+                        <ul>
+                            <li>Inconsolata</li>
+                            <li>Source Code Pro</li>
+                            <li>Droid Sans Mono</li>
+                            <li>Ubuntu Mono</li>
+                            <li>Cousine</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml4-ns ml0-l">
+                <h2 id="localizacao" class=" georgia pt4">localização:</h2>
+                <div class=" pv3 mw6" id="map" style="width: ; height: 500px;"></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
+                    });
+
+                </script>
+            </div>
+            <div class="ml4-ns ml0-l">
+                <h2 id="downloads" class=" georgia pt4">downloads:</h2>
+                
+
+                <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                    <h4 class="link underline-hover blue ml4">desenhos (.pdf)</h4>
+                </a>
+                <a target="_blank" href="downloads/chc_9julho_encarte_FINAL.pdf">
+                    <h4 class="link underline-hover blue ml4">encarte (.pdf)</h4>
+                </a>
+                <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                    <h4 class="link underline-hover blue ml4">desenhos(.dwg) (.pdf)</h4>
+                </a>
+                <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                    <h4 class="link underline-hover blue ml4">tabela (exel)</h4>
+                </a>
+
+            </div>
+        </article>
+-->
+        <footer class="footer pa3 bg-black-80 white helvetica">
+            <h5 class="ma1 tc">FAU-USP</h5>
+            <h5 class="ma1 tc">2018</h5>
+        </footer>
+    </div>
+
+    <script src="js/smartphoto.js?v=1"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new SmartPhoto(".js-img-viwer", {
+                showAnimation: false,
+                nav: false
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
