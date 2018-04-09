@@ -230,7 +230,7 @@ li {
 .card {
     display: inline-block;
     width: 136px;
-    height: 224px;
+    height: 232px;
     /*    background-color: #5e2ca5;*/
     background-image: url("slice1.png");
     /*    background-color: beige;*/
@@ -290,7 +290,9 @@ a {
 
 
 .high {
-    height: 48em
+    min-height: 48rem;
+    max-height: 48rem;
+    overflow-y: scroll;
 }
 
 .button {
