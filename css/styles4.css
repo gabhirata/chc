@@ -204,6 +204,14 @@ li {
     border-color: #5e2ca5;
 }
 
+.hover_purple_b:hover {
+    border-color: #5e2ca5;
+}
+
+.hover_purple_b:focus {
+    border-color: #5e2ca5;
+}
+
 .sticky {
     position: -webkit-sticky;
     /* Safari */
