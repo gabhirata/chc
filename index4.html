@@ -26,10 +26,13 @@
 -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css" rel="stylesheet" />
+
+    <script src="js/smooth-scroll.js"></script>
+
 </head>
 
-<body class="mw8-l mw7-ns center debugs debug-grids helvetica black-90  ">
-    <div class=" bg-white-90 sticky?">
+<body class="center debugs debug-grids helvetica black-90">
+    <div class="mw8-l mw7-ns bg-white-90 sticky? center">
         <div>
             <div class="mh2 d helvetica b--black-80 pa3 bb border bw1  ">
                 <nav class=" mh5-l mh4-ns mw8-l center-l ">
@@ -38,7 +41,7 @@
                         <div class="mt2 dib f5 fw6">
                             <a class="link hover-purple gray dib mr3" href="#" title="Home">sobre</a>
                             <a class="link hover-purple gray dib mr3" href="index5.html" title="About">buscar</a>
-                            <a class="link hover-purple gray dib mr3" href="#" title="Store">todos</a>
+                            <a class="link hover-purple gray dib mr3" href="mapa.html" title="Store">mapa</a>
                             <a class="link hover-purple gray dib" href="#" title="Contact">contato</a>
                         </div>
                     </div>
@@ -72,7 +75,7 @@
             </ul>
 
         </aside>
-        <article class="content pa3 bl-l b--black-20 pl4-ns pt2  ">
+        <article class="content pa3 bl-l b--black-20 pl4-ns pt2 overflow ">
             <div class="ml4-ns ml0-l ">
                 <img src="santacruz.png" class="mw-100 mw6-ns" alt="night sky over water">
                 <h2 id="texto" class="f4 pt4 mv3"> texto:</h2>
@@ -287,6 +290,11 @@
                 nav: false
             });
         });
+
+    </script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
 
     </script>
 

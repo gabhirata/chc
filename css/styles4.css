@@ -5,13 +5,10 @@
 }
 
 
+.overflow {
+    overflow-y: scroll;
 }
 
-/*
-h1, p {
-  margin: 0 0 1em 0;
-}
-*/
 
 .boxy {
     display: block;
