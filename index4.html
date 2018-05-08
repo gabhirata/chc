@@ -14,7 +14,9 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-lightbox.css">
 -->
-    <link rel="stylesheet" href="css/smartphoto.min.css">
+    <!--    <link rel="stylesheet" href="css/smartphoto.min.css">-->
+
+
     <link rel="stylesheet" href="css/tachyons.css">
     <link rel="stylesheet" href="css/styles4.css">
 
@@ -29,10 +31,19 @@
 
     <script src="js/smooth-scroll.js"></script>
 
+
+    <link href="css/featherlight.css" type="text/css" rel="stylesheet" />
+    <link href="css/featherlight.gallery.css" type="text/css" rel="stylesheet" />
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/featherlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/featherlight.gallery.js" type="text/javascript" charset="utf-8"></script>
+
+
+
 </head>
 
 <body class="center debugs debug-grids helvetica black-90">
-    <div class="mw8-l mw7-ns bg-white-90 sticky? center">
+    <div class="mw8-l mw7-ns bg-white sticky? center">
         <div>
             <div class="mh2 d helvetica b--black-80 pa3 bb border bw1  ">
                 <nav class=" mh5-l mh4-ns mw8-l center-l ">
@@ -50,13 +61,15 @@
         </div>
     </div>
     <div class="wrapper mw8 georgia">
-        <header class="header ph3 pv3 pv4-ns ">
+        <header id="inicio" class="header ph3 pv3 pv4-ns ">
             <h1 class="ml5-l ml4-ns f3 f2-ns mb2 helvetica">Conjunto Residencial Santa Cruz</h1>
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">Comissão Técnica do Instituto de Aposentadoria e Pensões dos Bancários</h4>
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">São Paulo, 1946 – 1950</h4>
         </header>
         <aside class="sidebar b--black-50 ">
             <ul class="list sidestuff mv0 pa2 fr helvetica sticky2 ">
+                <li>
+                    <a href="#inicio" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">início</a></li>
                 <li>
                     <a href="#texto" class="black-80 b--black-80 bb bw1 fw5 dib w5 pa2 link hover-purple">texto</a>
                 </li>
@@ -78,7 +91,7 @@
         <article class="content pa3 bl-l b--black-20 pl4-ns pt2 overflow ">
             <div class="ml4-ns ml0-l ">
                 <img src="santacruz.png" class="mw-100 mw6-ns" alt="night sky over water">
-                <h2 id="texto" class="f4 pt4 mv3"> texto:</h2>
+                <h2 id="texto" class="f4 pt5 mv3"> texto:</h2>
                 <p class="f6 f5-ns measure  fw lh-copy">
                     O conjunto localiza-se na Rua Santa Cruz, na Vila Mariana, próximo da Casa Modernista de Gregori Warchavchik, e é composto de 23 blocos com três pavimentos implantados em uma gleba triangular de 61,9 mil m2.
                 </p>
@@ -103,8 +116,8 @@
 
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="desenhos" class=" pt4">desenhos:</h2>
-                <div class="mw7">
+                <h2 id="desenhos" class=" f4 pt5 mv3">desenhos:</h2>
+                <div data-featherlight-gallery data-featherlight-filter="a" class="mw7">
                     <h3 class=" pt3 ma2 black-60 db">implantações:</h3>
                     <a href="imagens/1.png" class="js-img-viwer">
                         <img src="imagens/1.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
@@ -177,7 +190,7 @@
                 </div>
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="informacoes" class=" pt4">informações completas:</h2>
+                <h2 id="informacoes" class="  f4 pt5 mv3">informações completas:</h2>
                 <ul class="helvetica pl0 mw6 ">
                     <li class="">
                         <input type="checkbox" id="list-item-1">
@@ -247,8 +260,8 @@
                 </ul>
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="localizacao" class=" georgia pt4">localização:</h2>
-                <div class=" pv3 mw6" id="map" style="width: ; height: 500px;"></div>
+                <h2 id="localizacao" class=" georgia f4 pt5 mv3">localização:</h2>
+                <div class=" pv3 mw6" id="map" style="width: ; height: 600px;"></div>
                 <script>
                     mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
                     var map = new mapboxgl.Map({
@@ -256,10 +269,12 @@
                         style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
                     });
 
+                    map.scrollZoom.disable();
+
                 </script>
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="downloads" class=" georgia pt4">downloads:</h2>
+                <h2 id="downloads" class=" georgia f4 pt5 mv3">downloads:</h2>
 
                 <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
                     <h4 class="link underline-hover blue ml4">desenhos (.pdf)</h4>
@@ -276,12 +291,37 @@
 
             </div>
         </article>
+        <!--
         <footer class="footer pa3 bg-black-80 white helvetica">
             <h5 class="ma1 tc">FAU-USP</h5>
             <h5 class="ma1 tc">2018</h5>
         </footer>
+-->
     </div>
+    <footer class="footer pa3 bg-black-80 white-30 helvetica h4 mt5 mt6-ns">
+        <h5 class="ma1 tc fw4">FAU-USP</h5>
+        <h5 class="ma1 tc fw4">2018</h5>
+    </footer>
 
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+
+    </script>
+
+    <script>
+        $('a.gallery').featherlightGallery({
+            previousIcon: '«',
+            nextIcon: '»',
+            galleryFadeIn: 100,
+            galleryFadeOut: 100,
+
+            openSpeed: 300
+        });
+
+    </script>
+
+
+    <!--
     <script src="js/smartphoto.js?v=1"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -292,11 +332,11 @@
         });
 
     </script>
+-->
 
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
 
-    </script>
+
+
 
 
 </body>
