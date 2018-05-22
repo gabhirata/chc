@@ -5,28 +5,43 @@
 <head>
     <meta charset="utf-8">
     <!--    <meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
-    <title>cadernos habitação coletiva</title>
+    <title>Conj. Santa Cruz | cadernos habitação coletiva</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/smartphoto.min.css">
+
+
+
     <link rel="stylesheet" href="css/tachyons.css">
     <link rel="stylesheet" href="css/styles4.css">
+
+
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin.css">
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css" rel="stylesheet" />
+
+    <script src="js/smooth-scroll.js"></script>
+
+
+
+
 </head>
 
-<body class="mw8-l mw7-ns center debugs debug-grids helvetica black-90  ">
-    <div class=" bg-white-90 sticky?">
+<body class="center debugs debug-grids helvetica black-90">
+    <div class="mw8-l mw7-ns bg-white sticky? center">
         <div>
             <div class="mh2 d helvetica b--black-80 pa3 bb border bw1  ">
                 <nav class=" mh5-l mh4-ns mw8-l center-l ">
                     <div class=" " id="logodiv">
-                        <a id="logo" class="link hover-purple black-80 b f4 dib mr3" href="index5.html" title="Home">cadernos de habitação coletiva</a>
+                        <a id="logo" class="link hover-purple black-80 b f4 dib mr3" href="index5.html" title="Home">Ed. Japurá | cadernos de habitação coletiva</a>
                         <div class="mt2 dib f5 fw6">
                             <a class="link hover-purple gray dib mr3" href="#" title="Home">sobre</a>
                             <a class="link hover-purple gray dib mr3" href="index5.html" title="About">buscar</a>
-                            <a class="link hover-purple gray dib mr3" href="#" title="Store">todos</a>
+                            <a class="link hover-purple gray dib mr3" href="mapa.html" title="Store">mapa</a>
                             <a class="link hover-purple gray dib" href="#" title="Contact">contato</a>
                         </div>
                     </div>
@@ -35,7 +50,7 @@
         </div>
     </div>
     <div class="wrapper mw8 georgia">
-        <header class="header ph3 pv3 pv4-ns ">
+        <header id="inicio" class="header ph3 pv3 pv4-ns ">
             <h1 class="ml5-l ml4-ns f3 f2-ns mb2 helvetica">Edifício Japurá</h1>
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">Eduardo Kneese de Mello</h4>
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">São Paulo, 1945 – 1952</h4>
@@ -43,12 +58,17 @@
         <aside class="sidebar b--black-50 ">
             <ul class="list sidestuff mv0 pa2 fr helvetica sticky2 ">
                 <li>
+                    <a href="#inicio" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">início</a></li>
+                <li>
                     <a href="#texto" class="black-80 b--black-80 bb bw1 fw5 dib w5 pa2 link hover-purple">texto</a>
                 </li>
                 <li>
                     <a href="#desenhos" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">desenhos</a></li>
                 <li>
-                    <a href="#informacoes" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">informações completas</a>
+                    <a href="#fotos" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">imagens</a>
+                </li>
+                <li>
+                    <a href="#informacoes" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">ficha técnica</a>
                 </li>
                 <li>
                     <a href="#localizacao" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">localização</a>
@@ -56,36 +76,34 @@
                 <li>
                     <a href="#downloads" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">downloads</a>
                 </li>
+                <li>
+                    <a href="#pesquisa" class="black-80 b--black-80  bb bw1 fw5 dib w5 pa2 link hover-purple">pesquisa</a>
+                </li>
 
             </ul>
 
         </aside>
-        <article class="content pa3 bl-l b--black-20 pl4-ns pt2  ">
+        <article class="content pa3 bl-l b--black-20 pl4-ns pt2 overflow ">
             <div class="ml4-ns ml0-l ">
-                <img src="japura.png" class="mw-100 mw6-ns" alt="night sky over water">
-                <h2 id="texto" class="f4 pt4 mv3"> texto:</h2>
+                <img src="japura/imgs/japura.jpg" class="mw-100 mw6-ns" alt="edifício Japurá">
+                <h2 id="texto" class="helvetica f4 pt5 mv3"> texto:</h2>
                 <p class="f6 f5-ns measure  fw lh-copy">
                     Conjunto Residencial Japurá: Uma unidade de habitação no centro da cidade
                 </p>
                 <p class="f6 f5-ns measure   lh-copy">
                     O Conjunto Residencial Armando de Arruda Pereira, conhecido como Edifício Japurá, apresentado ao IAPI em 1945, pelo arquiteto Eduardo Kneese de Mello, destaca-se por ser uma experiência pioneira de produção de moradias econômicas na área central e por representar uma das primeiras aplicações do conceito corbusiano de unité d’habitation no país.
-
                 </p>
                 <p class="f6 f5-ns measure   lh-copy">
                     O caráter modernizador da intervenção não se limitava à influência corbusiana, com a utilização de elementos como térreo livre, teto-jardim e unidade duplex. A concepção do edifício articulou o conceito de habitação mínima com economia e racionalidade, buscando o melhor aproveitamento do solo e seu uso público. Sua promoção estava relacionada com a renovação da área central, decorrente da implantação do Plano de Avenidas, tendo substituído um dos maiores complexos de cortiços da capital paulista, situado junto ao Anel de Irradiação, fato que lhe conferiu um caráter higienizador e de controle social.
-
                 </p>
                 <p class="f6 f5-ns measure   lh-copy">
                     O vale do córrego Bexiga, onde o edifício foi implantado, era uma das regiões mais acidentadas do entorno do centro histórico de São Paulo. Nele foi edificada, nos anos 1920, a Vila Barros, núcleos de cortiços onde se destacava o Navio Parado, uma construção de dois pavimentos, com pequenas moradias, talvez o primeiro bloco habitacional construído no Brasil. O local era condenado pelos órgãos sanitários, com preconceito, como exemplo de um modo de morar coletivo que predominava entre os setores populares. Remover esse núcleo urbano tornou-se um desejo para as elites e para os órgãos de saúde, que enxergavam no local um foco de doenças, criminalidade e, talvez, de possíveis rebeliões, dada a forte coesão social que o caracterizava.
-
                 </p>
                 <p class="f6 f5-ns measure   lh-copy">
                     Embora o Edifício Japurá tenha cumprido um papel higienizador, atendendo uma demanda da “opinião pública” indignada com um aglomerado de cortiços tão visível junto ao centro renovado, ele representou uma alternativa progressista ao modelo convencional de produção imobiliária nas áreas centrais e consolidadas, baseado na segregação socioterritorial.
-
                 </p>
                 <p class="f6 f5-ns measure   lh-copy">
-                    Ao implementar um projeto de habitação social nas áreas centrais, o edifício foi precursor de uma perspectiva que passou a fazer parte da agenda urbana brasileira apenas no início do século XXI. Apesar de poucos antigos moradores do cortiço terem permanecido no local, a iniciativa criou, em uma região privilegiada, uma alternativa de moradia para trabalhadores de baixa e média baixa renda. Ao articular edifício e cidade, seu projeto mostrou uma forma democrática e aberta de renovar o centro em um momento crucial de metropolização da cidade.
-
+                    Embora o Edifício Japurá tenha cumprido um papel higienizador, atendendo uma demanda da “opinião pública” indignada com um aglomerado de cortiços tão visível junto ao centro renovado, ele representou uma alternativa progressista ao modelo convencional de produção imobiliária nas áreas centrais e consolidadas, baseado na segregação socioterritorial.
                 </p>
                 <p class="f6 f5-ns measure   lh-copy">
                     Nabil Bonduki Professor, Pesquisador da FAUUSP<br>[BONDUKI, 2014]
@@ -93,152 +111,306 @@
 
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="desenhos" class=" pt4">desenhos:</h2>
-                <div class="mw7">
-                    <h3 class=" pt3 ma2 black-60 db">implantações:</h3>
-                    <a href="imagens/1.png" class="js-img-viwer">
-                        <img src="imagens/1.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/2.png" class="js-img-viwer">
-                        <img src="imagens/2.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/3.png" class="js-img-viwer">
-                        <img src="imagens/3.png" class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple">
-                    </a>
-                    <h3 class=" pt3 ma2 black-60 db">plantas:</h3>
-                    <a href="imagens/4.png" class="js-img-viwer">
-                        <img src="imagens/4.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/5.png" class="js-img-viwer">
-                        <img src="imagens/5.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/6.png" class="js-img-viwer">
-                        <img src="imagens/6.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/7.png" class="js-img-viwer">
-                        <img src="imagens/7.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <h3 class=" pt3 ma2 black-60 db">elevações:</h3>
-                    <a href="imagens/8.png" class="js-img-viwer">
-                        <img src="imagens/8.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/9.png" class="js-img-viwer">
-                        <img src="imagens/9.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/10.png" class="js-img-viwer">
-                        <img src="imagens/10.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
-                    </a>
-                    <h3 class=" pt3 ma2 black-60 db">cortes:</h3>
-                    <a href="imagens/11.png" class="js-img-viwer">
-                        <img src="imagens/11.png" class="ma2-ns ma1 dib mw5-ns mw4 ba b--black-30 db hover_purple">
-                    </a>
-                    <h3 class=" pt3 ma2 black-60 db">unidades:</h3>
-                    <a href="imagens/12.png" class="js-img-viwer">
-                        <img src="imagens/12.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/13.png" class="js-img-viwer">
-                        <img src="imagens/13.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/14.png" class="js-img-viwer">
-                        <img src="imagens/14.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/15.png" class="js-img-viwer">
-                        <img src="imagens/15.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/16.png" class="js-img-viwer">
-                        <img src="imagens/16.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/17.png" class="js-img-viwer">
-                        <img src="imagens/17.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/18.png" class="js-img-viwer">
-                        <img src="imagens/18.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/19.png" class="js-img-viwer">
-                        <img src="imagens/19.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/20.png" class="js-img-viwer">
-                        <img src="imagens/20.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
-                    <a href="imagens/21.png" class="js-img-viwer">
-                        <img src="imagens/21.png" class="ma2-ns ma1 dib mw4-ns mw3 ba b--black-30 db hover_purple">
-                    </a>
+                <h2 id="desenhos" class="helvetica f4 pt5 mv3">desenhos:</h2>
+
+
+
+                <h3 class=" pt3 ma2 black-60 db">implantações:</h3>
+                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_2.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_2.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_22.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_22.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_23.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_23.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+
+                    
+
+                </div>
+
+                <h3 class=" pt3 ma2 black-60 db">plantas:</h3>
+                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_24.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_24.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_25.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_25.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_26.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_26.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_27.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_27.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_28.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_28.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_29.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_29.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+
+
+                    
+                </div>
+
+                <h3 class=" pt3 ma2 black-60 db">cortes e elevações:</h3>
+                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_210.png" itemprop="contentUrl" data-size="4961x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_210.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">planta</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_211.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_211.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+
+                </div>
+
+                <h3 class=" pt3 ma2 black-60 db">unidades:</h3>
+                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_212.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_212.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_213.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_213.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_214.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_214.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_215.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_215.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_216.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_216.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_217.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_217.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                    
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw4-ns mw3  ba b--black-30 db hover_purple" href="japura/imgs/Caderno%20de%20desenhos_Japur%C3%A12016_218.png" itemprop="contentUrl" data-size="2480x3508">
+                            <img src="japura/thumbs/Caderno%20de%20desenhos_Japur%C3%A12016_218.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">impantação</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="ml4-ns ml0-l">
+                <h2 id="fotos" class="helvetica f4 pt5 mv3">imagens:</h2>
+
+
+
+                <!--                <h3 class=" pt3 ma2 black-60 db">fotos:</h3>-->
+                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+
+
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/japura_01.png" itemprop="contentUrl" data-size="2449x1542">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_1.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">REVISTA ACRÓPOLE. Apartamentos para Industriários. São Paulo, n°119, 1948</figcaption>
+                    </figure>
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="ma2-ns ma1 dib mw5-ns mw4  ba b--black-30 db hover_purple" href="japura/imgs/japura02.jpg" itemprop="contentUrl" data-size="3008x2000">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_2.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">BONDUKI, N. G.; KOURY, A. P. Os pioneiros da habitação social: volume 3 / Onze propostas de morar para o Brasil moderno. 1 ed. ed. São Paulo: Editora Unesp: Edições Sesc, 2014. v. 2.</figcaption>
+                    </figure>
+
+                    <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura03.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_3.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura04.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_4.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura05.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_5.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura06.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_6.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura07.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_7.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura08.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_8.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a class="mw4-ns mw3 ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura09.jpg" itemprop="contentUrl" data-size="2550x3550">
+                            <img class="pt1 ph1" src="japura/thumbs/japura_9.jpg" itemprop="thumbnail" alt="Image description" />
+                        </a>
+                        <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
+                    </figure>
+
+
 
                 </div>
             </div>
+
+
+
+
             <div class="ml4-ns ml0-l">
-                <h2 id="informacoes" class=" pt4">informações completas:</h2>
-                <ul class="helvetica pl0 mw6 ">
-                    <li class="">
-                        <input type="checkbox" id="list-item-1">
-                        <label for="list-item-1" class=" hover-bg-purple hover-white bb first"><h1 class="di">A</h1> <h6 class="di fw6">PROJETO</h6></label>
-                        <ul class="helvetica bl ">
-                            <li class="collapsable">
-                                <p class="f6 b mb1 pb0 pt2 mt0 tooltip">Data do Projeto
-                                    <span class=" shadow-3 tooltiptext f6 lh-solid fw3 lh-copy">ano de publicação do projeto</span>
-                                </p>
-                                <p class="f6 mt0 pt0 mb0 pt0 black-80">1946</p>
-                            </li>
-                            <li class="collapsable">
-                                <p class="f6 b mb1 pb0 pt2 mt0">Data de finalização da obra</p>
-                                <p class="f6 mt0 pt0 mb0 pt0 black-80">1950</p>
-                            </li>
-                            <li class="collapsable">
-                                <p class="f6 b mb1 pb0 pt2 mt0">Arquiteto/s</p>
-                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Marcial Fleury de Oliveira</p>
-                            </li>
-                            <li class="collapsable">
-                                <p class="f6 b mb1 pb0 pt2 mt0">Cliente</p>
-                                <p class="f6 mt0 pt0 mb0 pt0 black-80">IAPB - Instituto de Aposentadoria e Pensão dos Bancários</p>
-                            </li>
-                            <li class="collapsable">
-                                <p class="f6 b mb1 pb0 pt2 mt0">Sistema de desenvolvimento</p>
-                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Público - locação - Plano A do IAPB</p>
-                            </li>
-                            <li class="collapsable">
-                                <p class="f6 b mb1 pb0 pt2 mt0">Usuário</p>
-                                <p class="f6 mt0 pt0 mb0 pt0 black-80">Associados do IAPB</p>
-                            </li>
-                        </ul>
+                <h2 id="informacoes" class="helvetica f4 pt5 mv3">ficha técnica:</h2>
+
+                <ul class="georgia bl pl3 bw black-80 b--black-80">
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Data do Projeto
+                        </p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">1945</p>
                     </li>
-                    <li>
-                        <input type="checkbox" id="list-item-2">
-                        <label for="list-item-2" class="hover-bg-purple hover-white bb first"><h1 class="di">B</h1> <h6 class="di fw6">LOCALIZAÇÃO</h6></label>
-                        <ul>
-                            <li>Open Sans</li>
-                            <li>Roboto</li>
-                            <li>Lato</li>
-                            <li>Stabo</li>
-                            <li>Oswald</li>
-                        </ul>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Data de finalização da obra</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">1952</p>
                     </li>
-                    <li>
-                        <input type="checkbox" id="list-item-3">
-                        <label for="list-item-3" class="hover-bg-purple hover-white bb first"><h1 class="di">C</h1> <h6 class="di fw6">EDIFÍCIO</h6></label>
-                        <ul>
-                            <li>Inconsolata</li>
-                            <li>Source Code Pro</li>
-                            <li>Droid Sans Mono</li>
-                            <li>Ubuntu Mono</li>
-                            <li>Cousine</li>
-                        </ul>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Arquiteto/s</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">Eduardo Kneese de Mello</p>
                     </li>
-                    <li>
-                        <input type="checkbox" id="list-item-4">
-                        <label for="list-item-4" class="hover-bg-purple hover-white bb first"><h1 class="di">D</h1> <h6 class="di fw6">TIPOS DE HABITAÇÃO</h6></label>
-                        <ul>
-                            <li>Inconsolata</li>
-                            <li>Source Code Pro</li>
-                            <li>Droid Sans Mono</li>
-                            <li>Ubuntu Mono</li>
-                            <li>Cousine</li>
-                        </ul>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Cliente</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">IAPB - Instituto de Aposentadoria e Pensão dos Bancários</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Sistema de desenvolvimento</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">Público - locação - Plano A do IAPB</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Usuário</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">Associados do IAPB</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Localização</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">Rua Japurá, 55 e 129 - Bela Vista, São Paulo - SP, Brasil.</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Tipologias</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">Lâmina</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">Bloco</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Área do terreno ( m<sup>2</sup> )</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">6.910 m<sup>2</sup></p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Área construída ( m<sup>2 </sup>)</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">28.248,81 m<sup>2</sup></p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Coeficiente de aproveitamento</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">4,35</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Taxa de Ocupação</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">58%</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Número de Unidades</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">310 (Construídas)</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">310 (Programadas)</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Densidade de habitações ( unidades/hectare )</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">448,62</p>
                     </li>
                 </ul>
+
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="localizacao" class=" georgia pt4">localização:</h2>
-                <div class=" pv3 mw6" id="map" style="width: ; height: 500px;"></div>
+                <h2 id="localizacao" class=" helvetica f4 pt5 mv3">localização:</h2>
+                <div class=" pv3 mw6" id="map" style="width: ; height:32rem;"></div>
+                <!--
                 <script>
                     mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
                     var map = new mapboxgl.Map({
@@ -246,42 +418,226 @@
                         style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
                     });
 
+                    map.scrollZoom.disable();
+
                 </script>
+-->
             </div>
             <div class="ml4-ns ml0-l">
-                <h2 id="downloads" class=" georgia pt4">downloads:</h2>
+                <h2 id="downloads" class=" helvetica f4 pt5 mv3">downloads:</h2>
 
-                <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
-                    <h4 class="link underline-hover blue ml4">desenhos (.pdf)</h4>
-                </a>
-                <a target="_blank" href="downloads/chc_9julho_encarte_FINAL.pdf">
-                    <h4 class="link underline-hover blue ml4">encarte (.pdf)</h4>
-                </a>
-                <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
-                    <h4 class="link underline-hover blue ml4">desenhos(.dwg) (.pdf)</h4>
-                </a>
-                <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
-                    <h4 class="link underline-hover blue ml4">tabela (exel)</h4>
-                </a>
+                <div class="mt4 bl">
+                    <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                        <h4 class="link underline-hover blue ml4">desenhos (.pdf)</h4>
+                    </a>
+                    <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                        <h4 class="link underline-hover blue ml4">desenhos (.dwg)</h4>
+                    </a>
+                    <a target="_blank" href="downloads/chc_9julho_encarte_FINAL.pdf">
+                        <h4 class="link underline-hover blue ml4">encarte (.pdf)</h4>
+                    </a>
+
+                    <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                        <h4 class="link underline-hover blue ml4">tabela (exel)</h4>
+                    </a>
+                    <a target="_blank" href="downloads/chc_9julho_caderno_160219.pdf">
+                        <h4 class="link underline-hover blue ml4">pesquisa (.pdf)</h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ml4-ns ml0-l">
+                <h2 id="pesquisa" class="helvetica f4 pt5 mv3">pesquisa:</h2>
+
+                <ul class="georgia black-80 pa3  b--black-30 bw1 bg-black-05">
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">CHC</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">006</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Pesquisador</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">?</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Orientador</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">?</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Período</p>
+                        <p class="mt1 f7 f6-ns mt0 pt0 mb0 pt0 black-80">2015</p>
+                    </li>
+                    <li class="pv1 pv2-ns">
+                        <p class="f7 f6-ns b mb1 pb0 pt1 mt0">Faculdade de Arquitetura e Urbanismo FAU USP</p>
+                    </li>
+
+                </ul>
 
             </div>
         </article>
+        <!--
         <footer class="footer pa3 bg-black-80 white helvetica">
             <h5 class="ma1 tc">FAU-USP</h5>
             <h5 class="ma1 tc">2018</h5>
         </footer>
+-->
+    </div>
+    <footer class="footer pa3 bg-black-80 white-30 helvetica h4 mt6 mt7-ns">
+        <h5 class="ma1 tc fw4">Cadernos de Habitação Coletiva</h5>
+        <h5 class="ma1 tc fw4">FAU-USP</h5>
+        <h5 class="ma1 tc fw4">2018</h5>
+    </footer>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+            <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <script src="js/smartphoto.js?v=1"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new SmartPhoto(".js-img-viwer", {
-                showAnimation: false,
-                nav: false
+        var scroll = new SmoothScroll('a[href*="#"]');
+
+    </script>
+
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.js"></script>
+
+
+
+    <script src="js/photoswipe-slides.js"></script>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
+        });
+        map.on('load', function() {
+            // Add a layer showing the places.
+            map.addLayer({
+                "id": "places",
+                "type": "symbol",
+                "source": {
+                    "type": "geojson",
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": [{
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/santacruz.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Conjunto Residencial Santa Cruz</h5><h5 class='georgia ma1 ml2 f7 black-60'>1932 - 1934</h5>",
+                                "icon": "circle-pad",
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [-46.624324, -23.597858]
+                            }
+                        }]
+                    }
+                },
+                "layout": {
+                    "icon-image": "{icon}-15",
+                    "icon-allow-overlap": true,
+                }
+            });
+
+            // When a click event occurs on a feature in the places layer, open a popup at the
+            // location of the feature, with description HTML from its properties.
+            map.on('click', 'places', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+
+                // Ensure that if the map is zoomed out such that multiple
+                // copies of the feature are visible, the popup appears
+                // over the copy being pointed to.
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+            });
+
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'places', function() {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'places', function() {
+                map.getCanvas().style.cursor = '';
             });
         });
 
     </script>
+
+
+
+
+
+
+
+
 
 
 </body>
