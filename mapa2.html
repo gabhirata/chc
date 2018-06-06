@@ -72,14 +72,14 @@
         // When the user clicks the marker, an info window opens.
 
         function initMap() {
-            var uluru = {
+            var japura = {
                 lat: -23.552,
                 lng: -46.6413
 
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
-                center: uluru,
+                center: japura,
                 gestureHandling: 'cooperative',
                 zoomControl: true,
                 mapTypeControl: true,
@@ -241,10 +241,10 @@
             });
 
             var marker = new google.maps.Marker({
-                position: uluru,
+                position: japura,
                 map: map,
-                icon: 'circle-pad-15.svg',
-                title: 'Uluru (Ayers Rock)'
+                icon: 'circle-pad-15-2.svg',
+                title: 'Edifício Japurá'
             });
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
