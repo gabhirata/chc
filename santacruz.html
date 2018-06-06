@@ -58,29 +58,29 @@
         <aside class="sidebar b--black-50 ">
             <ul class="list sidestuff mv0 pa2 fr helvetica sticky2 w5 pr3">
                 <li>
-                    <a href="#inicio" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">início</a></li>
+                    <a href="#inicio" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">início</a></li>
                 <li>
-                    <a href="#texto" class="black-80 b--black-80 bb bw1 fw5 dib w-100 pa2 link hover-purple">texto</a>
+                    <a href="#texto" class="hover_purple_b black-80 b--black-80 bb bw1 fw5 dib w-100 pa2 link hover-purple">texto</a>
                 </li>
                 <li>
-                    <a href="#desenhos" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">desenhos</a></li>
+                    <a href="#desenhos" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">desenhos</a></li>
                 <li>
-                    <a href="#fotos" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">imagens</a>
+                    <a href="#fotos" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">imagens</a>
                 </li>
                 <li>
-                    <a href="#informacoes" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">ficha técnica</a>
+                    <a href="#informacoes" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">ficha técnica</a>
                 </li>
                 <li>
-                    <a href="#localizacao" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">localização</a>
+                    <a href="#localizacao" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">localização</a>
                 </li>
                 <li>
-                    <a href="#downloads" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">downloads</a>
+                    <a href="#downloads" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">downloads</a>
                 </li>
                 <li>
-                    <a href="#selecao" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">seleção bibliográfica</a>
+                    <a href="#selecao" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">seleção bibliográfica</a>
                 </li>
                 <li>
-                    <a href="#pesquisa" class="black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">pesquisa</a>
+                    <a href="#pesquisa" class="hover_purple_b black-80 b--black-80  bb bw1 fw5 dib w-100 pa2 link hover-purple">pesquisa</a>
                 </li>
 
             </ul>
@@ -759,11 +759,11 @@
 
             });
 
-            var contentString = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
-
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
+//            var contentString = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+//
+//            var infowindow = new google.maps.InfoWindow({
+//                content: contentString
+//            });
 
             var marker = new google.maps.Marker({
                 position: santacruz,
@@ -771,9 +771,10 @@
                 icon: 'circle-pad-15-2.svg',
                 title: 'Edifício Japurá'
             });
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
+            
+//            marker.addListener('click', function() {
+//                infowindow.open(map, marker);
+//            });
         }
 
     </script>
@@ -781,11 +782,6 @@
 
 
     </script>
-
-
-
-
-
 
 
 

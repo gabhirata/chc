@@ -68,194 +68,227 @@
             <div id='map' style='width: auto; height: 38rem' class=""></div>
         </div>
         <script>
-        // This example displays a marker at the center of Australia.
-        // When the user clicks the marker, an info window opens.
+            // This example displays a marker at the center of Australia.
+            // When the user clicks the marker, an info window opens.
 
-        function initMap() {
-            var japura = {
-                lat: -23.552,
-                lng: -46.6413
+            function initMap() {
+                var saopaulo = {
+                    lat: -23.550477,
+                    lng: -46.633942
 
-            };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 17,
-                center: japura,
-                gestureHandling: 'cooperative',
-                zoomControl: true,
-                mapTypeControl: true,
-                mapTypeControlOptions: {
-                    style: google.maps.MapTypeControlStyle.DEFAULT,
-                    mapTypeIds: ['roadmap', 'satellite']
-                },
-                scaleControl: true,
-                streetViewControl: false,
-                rotateControl: false,
-                fullscreenControl: false,
-                styles: [{
-                        "elementType": "labels.icon",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#888888"
-                        }]
-                    },
-                    {
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{
-                            "color": "#f5f5f5"
-                        }]
-                    },
-                    {
-                        "featureType": "administrative.land_parcel",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#bdbdbd"
-                        }]
-                    },
-                    {
-                        "featureType": "landscape.man_made",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                            "color": "#f5f5f5"
-                        }]
-                    },
-                    {
-                        "featureType": "landscape.man_made",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{
-                            "color": "#dddddd"
-                        }]
-                    },
-                    {
-                        "featureType": "landscape.natural",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#f5f5f5"
-                        }]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#eeeeee"
-                        }]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#757575"
-                        }]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#e5e5e5"
-                        }]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#9e9e9e"
-                        }]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#ffffff"
-                        }]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#757575"
-                        }]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#dadada"
-                        }]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#616161"
-                        }]
-                    },
-                    {
-                        "featureType": "road.local",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#9e9e9e"
-                        }]
-                    },
-                    {
-                        "featureType": "transit.line",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#e5e5e5"
-                        }]
-                    },
-                    {
-                        "featureType": "transit.station",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#eeeeee"
-                        }]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [{
-                            "color": "#c9c9c9"
-                        }]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                            "color": "#9e9e9e"
-                        }]
-                    }
-                ]
+                };
+                var japura = {
+                    lat: -23.552,
+                    lng: -46.6413
 
+                };
+                var santacruz = {
+                    lat: -23.597639,
+                    lng: -46.624139
 
-
-            });
-
-            var contentString = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
-
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-
-            var marker = new google.maps.Marker({
-                position: japura,
-                map: map,
-                icon: 'circle-pad-15-2.svg',
-                title: 'Edifício Japurá'
-            });
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
-        }
-
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV3n9n_4CyiVoOTyq6rfpzhwtdU8HDeg&callback=initMap">
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 12,
+                    center: saopaulo,
+                    gestureHandling: 'cooperative',
+                    zoomControl: true,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.DEFAULT,
+                        mapTypeIds: ['roadmap', 'satellite']
+                    },
+                    scaleControl: true,
+                    streetViewControl: false,
+                    rotateControl: false,
+                    fullscreenControl: false,
+                    styles: [{
+                            "elementType": "labels.icon",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#888888"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#bdbdbd"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape.man_made",
+                            "elementType": "geometry.fill",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape.man_made",
+                            "elementType": "geometry.stroke",
+                            "stylers": [{
+                                "color": "#dddddd"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#eeeeee"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#e5e5e5"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#ffffff"
+                            }]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#dadada"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#616161"
+                            }]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "transit.line",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#e5e5e5"
+                            }]
+                        },
+                        {
+                            "featureType": "transit.station",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#eeeeee"
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#c9c9c9"
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }
+                    ]
 
 
-    </script>
+
+                });
+
+                var contentStringJapura = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+
+                var contentStringSantacruz = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+
+                var infowindowJapura = new google.maps.InfoWindow({
+                    content: contentStringJapura
+                });
+
+                var infowindowSantacruz = new google.maps.InfoWindow({
+                    content: contentStringSantacruz
+                });
+
+                var markerJapura = new google.maps.Marker({
+                    position: japura,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Edifício Japurá'
+                });
+                markerJapura.addListener('click', function() {
+                    infowindowJapura.open(map, markerJapura);
+                });
+
+                var markerSantacruz = new google.maps.Marker({
+                    position: santacruz,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Conj. Santa Cruz'
+                });
+                markerSantacruz.addListener('click', function() {
+                    infowindowSantacruz.open(map, markerSantacruz);
+                });
+            }
+
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV3n9n_4CyiVoOTyq6rfpzhwtdU8HDeg&callback=initMap">
+
+
+        </script>
 
 
     </div>
@@ -264,7 +297,7 @@
         <h5 class="ma1 tc fw4">2018</h5>
     </footer>
 
-    
+
 
 
 </body>
