@@ -87,8 +87,13 @@
                     lng: -46.624139
 
                 };
+                var vilaguiomar = {
+                    lat: -23.657333, 
+                    lng: -46.542778
+                    
+                };
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 12,
+                    zoom: 11,
                     center: saopaulo,
                     gestureHandling: 'cooperative',
                     zoomControl: true,
@@ -251,9 +256,11 @@
 
                 });
 
-                var contentStringJapura = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+                var contentStringJapura = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
 
-                var contentStringSantacruz = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+                var contentStringSantacruz = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+                
+                var contentStringVilaguiomar = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="vilaguiomar.html"><div class="ph"><img class="ph" src="thumbs/vilaguiomar.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Vila Guiomar</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5></div></div></a></div></div>'
 
                 var infowindowJapura = new google.maps.InfoWindow({
                     content: contentStringJapura
@@ -261,6 +268,10 @@
 
                 var infowindowSantacruz = new google.maps.InfoWindow({
                     content: contentStringSantacruz
+                });
+                
+                 var infowindowVilaguiomar = new google.maps.InfoWindow({
+                    content: contentStringVilaguiomar
                 });
 
                 var markerJapura = new google.maps.Marker({
@@ -281,6 +292,16 @@
                 });
                 markerSantacruz.addListener('click', function() {
                     infowindowSantacruz.open(map, markerSantacruz);
+                });
+                
+                var markerVilaguiomar = new google.maps.Marker({
+                    position: vilaguiomar,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Conj. Vila Guimar'
+                });
+                markerVilaguiomar.addListener('click', function() {
+                    infowindowVilaguiomar.open(map, markerVilaguiomar);
                 });
             }
 

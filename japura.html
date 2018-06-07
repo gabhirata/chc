@@ -4,31 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <!--    <meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
     <title>Ed. Japurá | cadernos habitação coletiva</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
     <link rel="stylesheet" href="css/tachyons.css">
     <link rel="stylesheet" href="css/styles4.css">
-
-
     <link rel="stylesheet" href="css/photoswipe.css">
     <link rel="stylesheet" href="css/default-skin.css">
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>
-
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css" rel="stylesheet" />
-
     <script src="js/smooth-scroll.js"></script>
-
-
-
-
 </head>
 
 <body class="center debugs debug-grids helvetica black-80">
@@ -270,14 +258,7 @@
 
             <div class="ml4-ns ml0-l">
                 <h2 id="fotos" class="helvetica f4 pt5 pb3">imagens:</h2>
-
-
-
-                <!--                <h3 class=" pt3 ma2 black-60 db">fotos:</h3>-->
                 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-
-
 
                     <figure class="ma0 dib" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                         <a class="ma2-ns ma1 dib  ba b--black-30 db hover_purple" href="japura/imgs/japura_01.png" itemprop="contentUrl" data-size="2449x1542">
@@ -336,13 +317,8 @@
                         <figcaption class="dn" itemprop="caption description">Revista Acrópole nº 119, 1948; Medidas originais: 210mmx297mm </figcaption>
                     </figure>
 
-
-
                 </div>
             </div>
-
-
-
 
             <div class="ml4-ns ml0-l">
                 <h2 id="informacoes" class="helvetica f4 pt5 pb3">ficha técnica:</h2>
@@ -413,18 +389,7 @@
             <div class="ml4-ns ml0-l">
                 <h2 id="localizacao" class=" helvetica f4 pt5 pb3">localização:</h2>
                 <div class=" pv3 mw6" id="map" style="width: ; height:32rem;"></div>
-                <!--
-                <script>
-                    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
-                    var map = new mapboxgl.Map({
-                        container: 'map',
-                        style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
-                    });
-
-                    map.scrollZoom.disable();
-
-                </script>
--->
+              
             </div>
             <div class="ml4-ns ml0-l">
                 <h2 id="downloads" class=" helvetica f4 pt5 pb3">downloads:</h2>
@@ -499,12 +464,7 @@
 
             </div>
         </article>
-        <!--
-        <footer class="footer pa3 bg-black-80 white helvetica">
-            <h5 class="ma1 tc">FAU-USP</h5>
-            <h5 class="ma1 tc">2018</h5>
-        </footer>
--->
+ 
     </div>
     <footer class="footer pa3 bg-black-80 white-30 helvetica h4 mt6 mt7-ns">
         <h5 class="ma1 tc fw4">Cadernos de Habitação Coletiva</h5>
@@ -512,43 +472,22 @@
         <h5 class="ma1 tc fw4">2018</h5>
     </footer>
 
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+   
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <!-- Background of PhotoSwipe. 
-         It's a separate element, as animating opacity is faster than rgba(). -->
         <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
         <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-            <!-- don't modify these 3 pswp__item elements, data is added later on. -->
             <div class="pswp__container">
                 <div class="pswp__item"></div>
                 <div class="pswp__item"></div>
                 <div class="pswp__item"></div>
             </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
             <div class="pswp__ui pswp__ui--hidden">
-
                 <div class="pswp__top-bar">
-
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
                     <div class="pswp__counter"></div>
-
                     <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
                     <button class="pswp__button pswp__button--share" title="Share"></button>
-
                     <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
                     <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -557,25 +496,18 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                     <div class="pswp__share-tooltip"></div>
                 </div>
-
                 <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
             </button>
-
                 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
-
                 <div class="pswp__caption">
                     <div class="pswp__caption__center"></div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <script>
@@ -587,15 +519,10 @@
 
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.js"></script>
-
-
-
     <script src="js/photoswipe-slides.js"></script>
 
     <script>
-        // This example displays a marker at the center of Australia.
-        // When the user clicks the marker, an info window opens.
-
+        
         function initMap() {
             var japura = {
                 lat: -23.552,
@@ -759,11 +686,11 @@
 
             });
 
-            var contentString = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
-
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
+//            var contentString = '<div class="pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+//
+//            var infowindow = new google.maps.InfoWindow({
+//                content: contentString
+//            });
 
             var marker = new google.maps.Marker({
                 position: japura,
@@ -771,23 +698,14 @@
                 icon: 'circle-pad-15-2.svg',
                 title: 'Edifício Japurá'
             });
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
+//            marker.addListener('click', function() {
+//                infowindow.open(map, marker);
+//            });
         }
 
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV3n9n_4CyiVoOTyq6rfpzhwtdU8HDeg&callback=initMap">
-
-
     </script>
-
-
-
-
-
-
-
 
 
 
