@@ -32,11 +32,11 @@
 
 .sidebar {
     display: none;
-    /*    position: fixed;*/
 }
 
 .sidestuff {
-    max-height: 400px;
+    max-height: 25rem;
+    
 }
 
 @media screen and (min-width: 960px) {
@@ -214,7 +214,7 @@ li {
     /* Safari */
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 2;
 }
 
 
@@ -222,7 +222,7 @@ li {
     position: -webkit-sticky;
     /* Safari */
     position: sticky;
-    top: 4rem;
+    top: 7rem;
 }
 
 .card {
