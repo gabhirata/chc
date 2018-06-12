@@ -68,148 +68,267 @@
             <div id='map' style='width: auto; height: 38rem' class=""></div>
         </div>
         <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2hpcmF0YSIsImEiOiJjamEydXhvNGs5ZjR6MnhwYWNkYmdhbnBxIn0.VjLw6g32mjPRGwsjfRXrTw';
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/ghirata/cja2vcxah13u32sp9a5k3mpng'
-            });
-            map.on('load', function() {
-                // Add a layer showing the places.
-                map.addLayer({
-                    "id": "places",
-                    "type": "symbol",
-                    "source": {
-                        "type": "geojson",
-                        "data": {
-                            "type": "FeatureCollection",
-                            "features": [{
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/pauliceia.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Edifícios Pauliceia e São Carlos do Pinhal</h5><h5 class='georgia ma1 ml2 f7 black-60'>1952 - 1961</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.651250, -23.564778]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/copan.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Edifício Copan</h5><h5 class='georgia ma1 ml2 f7 black-60'>1952 - 1961</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.644459, -23.546577]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/jardimedite.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Jardim Edite</h5><h5 class='georgia ma1 ml2 f7 black-60'>2010</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.694343, -23.613402]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='japura.html'><div class='ph'><img src='thumbs/japura.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Edifício Japurá</h5><h5 class='georgia ma1 ml2 f7 black-60'>1945 - 1952</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.641358, -23.551701]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/vilaguiomar.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Conjunto Residencial Vila Guiomar</h5><h5 class='georgia ma1 ml2 f7 black-60'>1940 - 1953</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.542616, -23.656598]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/santoantonio.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Conjunto Residencial Santo Antonio</h5><h5 class='georgia ma1 ml2 f7 black-60'>1962 - 1967</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.637278, -23.470330]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='santacruz.html'><div class='ph'><img src='thumbs/santacruz.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Conjunto Residencial Santa Cruz</h5><h5 class='georgia ma1 ml2 f7 black-60'>1932 - 1934</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.624324, -23.597858]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/mooca.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Conjunto Residencial da Mooca</h5><h5 class='georgia ma1 ml2 f7 black-60'>1946 - 1950</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.592056, -23.554361]
-                                }
-                            }, {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<div class='card ba bw1 b--black-10 hover_purple'><a href='index4.html'><div class='ph'><img src='thumbs/9julho.png'></div><div class='placeholder2'><div class='placeholder3'><h5 class='helvetica lh-solid ma1 ml2 mt2 black-80 f5'>Conjunto Residencial Nove de Julho</h5><h5 class='georgia ma1 ml2 f7 black-60'>1946 - 1950</h5>",
-                                    "icon": "circle-pad",
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [-46.670888, -23.577226]
-                                }
+            // This example displays a marker at the center of Australia.
+            // When the user clicks the marker, an info window opens.
+
+            function initMap() {
+                var saopaulo = {
+                    lat: -23.550477,
+                    lng: -46.633942
+
+                };
+                var japura = {
+                    lat: -23.552,
+                    lng: -46.6413
+
+                };
+                var santacruz = {
+                    lat: -23.597639,
+                    lng: -46.624139
+
+                };
+                var vilaguiomar = {
+                    lat: -23.657333, 
+                    lng: -46.542778
+                    
+                };
+                var novejulho = {
+                lat: -23.576889, 
+                lng: -46.671417
+                    
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 11,
+                    center: saopaulo,
+                    gestureHandling: 'cooperative',
+                    zoomControl: true,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.DEFAULT,
+                        mapTypeIds: ['roadmap', 'satellite']
+                    },
+                    scaleControl: true,
+                    streetViewControl: false,
+                    rotateControl: false,
+                    fullscreenControl: false,
+                    styles: [{
+                            "elementType": "labels.icon",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#888888"
+                            }]
+                        },
+                        {
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#bdbdbd"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape.man_made",
+                            "elementType": "geometry.fill",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape.man_made",
+                            "elementType": "geometry.stroke",
+                            "stylers": [{
+                                "color": "#dddddd"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#f5f5f5"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#eeeeee"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#e5e5e5"
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#ffffff"
+                            }]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#757575"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#dadada"
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#616161"
+                            }]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "transit.line",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#e5e5e5"
+                            }]
+                        },
+                        {
+                            "featureType": "transit.station",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#eeeeee"
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#c9c9c9"
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#9e9e9e"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text",
+                            "stylers": [{
+                                "visibility": "off"
                             }]
                         }
-                    },
-                    "layout": {
-                        "icon-image": "{icon}-15",
-                        "icon-allow-overlap": true,
-                    }
+                    ]
+
+
+
                 });
 
-                // When a click event occurs on a feature in the places layer, open a popup at the
-                // location of the feature, with description HTML from its properties.
-                map.on('click', 'places', function(e) {
-                    var coordinates = e.features[0].geometry.coordinates.slice();
-                    var description = e.features[0].properties.description;
+                var contentStringJapura = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
 
-                    // Ensure that if the map is zoomed out such that multiple
-                    // copies of the feature are visible, the popup appears
-                    // over the copy being pointed to.
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
+                var contentStringSantacruz = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
+                
+                var contentStringVilaguiomar = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="vilaguiomar.html"><div class="ph"><img class="ph" src="thumbs/vilaguiomar.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Vila Guiomar</h5><h5 class=" ma1 ml2 f7 black-60">1940 – 1953</h5></div></div></a></div></div>'
+                
+                 var contentStringNovejulho = '<div class="georgia pa0 ma0 pl3 pt3 pb3"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="v9julho.html"><div class="ph"><img class="ph" src="thumbs/9julho.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Nove de Julho</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5></div></div></a></div></div>'
 
-                    new mapboxgl.Popup()
-                        .setLngLat(coordinates)
-                        .setHTML(description)
-                        .addTo(map);
+                var infowindowJapura = new google.maps.InfoWindow({
+                    content: contentStringJapura
                 });
 
-                // Change the cursor to a pointer when the mouse is over the places layer.
-                map.on('mouseenter', 'places', function() {
-                    map.getCanvas().style.cursor = 'pointer';
+                var infowindowSantacruz = new google.maps.InfoWindow({
+                    content: contentStringSantacruz
+                });
+                
+                 var infowindowVilaguiomar = new google.maps.InfoWindow({
+                    content: contentStringVilaguiomar
+                });
+                
+                var infowindowNovejulho = new google.maps.InfoWindow({
+                    content: contentStringNovejulho
                 });
 
-                // Change it back to a pointer when it leaves.
-                map.on('mouseleave', 'places', function() {
-                    map.getCanvas().style.cursor = '';
+                var markerJapura = new google.maps.Marker({
+                    position: japura,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Edifício Japurá'
                 });
-            });
+                markerJapura.addListener('click', function() {
+                    infowindowJapura.open(map, markerJapura);
+                });
+
+                var markerSantacruz = new google.maps.Marker({
+                    position: santacruz,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Conj. Santa Cruz'
+                });
+                markerSantacruz.addListener('click', function() {
+                    infowindowSantacruz.open(map, markerSantacruz);
+                });
+                
+                var markerVilaguiomar = new google.maps.Marker({
+                    position: vilaguiomar,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Conj. Vila Guimar'
+                });
+                markerVilaguiomar.addListener('click', function() {
+                    infowindowVilaguiomar.open(map, markerVilaguiomar);
+                });
+                
+                var markerNovejulho = new google.maps.Marker({
+                    position: novejulho,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Conj. Nove de Juhlo'
+                });
+                markerNovejulho.addListener('click', function() {
+                    infowindowNovejulho.open(map, markerNovejulho);
+                });
+            }
+
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUV3n9n_4CyiVoOTyq6rfpzhwtdU8HDeg&callback=initMap">
+
 
         </script>
 
@@ -220,7 +339,7 @@
         <h5 class="ma1 tc fw4">2018</h5>
     </footer>
 
-    
+
 
 
 </body>
