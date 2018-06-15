@@ -88,14 +88,20 @@
 
                 };
                 var vilaguiomar = {
-                    lat: -23.657333, 
+                    lat: -23.657333,
                     lng: -46.542778
-                    
+
                 };
                 var novejulho = {
-                lat: -23.576889, 
-                lng: -46.671417
-                    
+                    lat: -23.576889,
+                    lng: -46.671417
+
+                };
+                var mooca = {
+                    lat: -23.554361,
+                    lng: -46.592056
+
+
                 };
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 11,
@@ -264,10 +270,12 @@
                 var contentStringJapura = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="japura.html"><div class="ph"><img class="ph" src="thumbs/japura.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Edifício Japurá</h5><h5 class=" ma1 ml2 f7 black-60">1945 - 1952</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
 
                 var contentStringSantacruz = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="santacruz.html"><div class="ph"><img class="ph" src="thumbs/santacruz.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Santa Cruz</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5><h5 class=" dn">Eduardo Kneese de Mello</h5><h5 class=" dn">iapi his publico público</h5><h5 class=" dn">sao são paulo</h5><h5 class=" dn">concreto</h5></div></div></a></div></div>'
-                
+
                 var contentStringVilaguiomar = '<div class="georgia pa0 ma0 pl3 pt3 pb3" data-category="2, 3, 21, 23" data-sort="1952"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="vilaguiomar.html"><div class="ph"><img class="ph" src="thumbs/vilaguiomar.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Vila Guiomar</h5><h5 class=" ma1 ml2 f7 black-60">1940 – 1953</h5></div></div></a></div></div>'
+
+                var contentStringNovejulho = '<div class="georgia pa0 ma0 pl3 pt3 pb3"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="9julho.html"><div class="ph"><img class="ph" src="thumbs/9julho.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Nove de Julho</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5></div></div></a></div></div>'
                 
-                 var contentStringNovejulho = '<div class="georgia pa0 ma0 pl3 pt3 pb3"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="9julho.html"><div class="ph"><img class="ph" src="thumbs/9julho.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial Nove de Julho</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5></div></div></a></div></div>'
+                var contentStringMooca = '<div class="georgia pa0 ma0 pl3 pt3 pb3"><div class="= card bg-white ba bw1 b--black-10 hover_purple "><a href="mooca.html"><div class="ph"><img class="ph" src="thumbs/mooca.png"></div><div class="placeholder2"><div class="placeholder3"><h5 class="helvetica ma1 ml2 mt2 black-80 f5">Conjunto Residencial da Mooca</h5><h5 class=" ma1 ml2 f7 black-60">1946 – 1950</h5></div></div></a></div></div>'
 
                 var infowindowJapura = new google.maps.InfoWindow({
                     content: contentStringJapura
@@ -276,13 +284,17 @@
                 var infowindowSantacruz = new google.maps.InfoWindow({
                     content: contentStringSantacruz
                 });
-                
-                 var infowindowVilaguiomar = new google.maps.InfoWindow({
+
+                var infowindowVilaguiomar = new google.maps.InfoWindow({
                     content: contentStringVilaguiomar
                 });
-                
+
                 var infowindowNovejulho = new google.maps.InfoWindow({
                     content: contentStringNovejulho
+                });
+                
+                 var infowindowMooca = new google.maps.InfoWindow({
+                    content: contentStringMooca
                 });
 
                 var markerJapura = new google.maps.Marker({
@@ -304,7 +316,7 @@
                 markerSantacruz.addListener('click', function() {
                     infowindowSantacruz.open(map, markerSantacruz);
                 });
-                
+
                 var markerVilaguiomar = new google.maps.Marker({
                     position: vilaguiomar,
                     map: map,
@@ -314,7 +326,7 @@
                 markerVilaguiomar.addListener('click', function() {
                     infowindowVilaguiomar.open(map, markerVilaguiomar);
                 });
-                
+
                 var markerNovejulho = new google.maps.Marker({
                     position: novejulho,
                     map: map,
@@ -323,6 +335,16 @@
                 });
                 markerNovejulho.addListener('click', function() {
                     infowindowNovejulho.open(map, markerNovejulho);
+                });
+                
+                 var markerMooca = new google.maps.Marker({
+                    position: mooca,
+                    map: map,
+                    icon: 'circle-pad-15-2.svg',
+                    title: 'Conj. da Mooca'
+                });
+                markerMooca.addListener('click', function() {
+                    infowindowMooca.open(map, markerMooca);
                 });
             }
 
