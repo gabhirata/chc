@@ -330,6 +330,25 @@ a {
 .w35 {
     width: 6rem;
 }
+
+footer {
+    height:8rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+body {
+/*    padding-bottom: 8rem ;*/
+}
+
+html {
+    min-height: 100%;
+}
+
+.allbutfoot {
+    min-height: 100%;
+}
     
 
 
