@@ -49,7 +49,7 @@
                     <div class=" " id="logodiv">
                         <a id="logo" class="link hover-purple black-80 b f4 dib mr3" href="index5.html" title="Home">cadernos de habitação coletiva</a>
                         <div class="mt2 dib f5 fw6">
-                             <a class="link hover-purple gray dib mr3" href="sobre.html" title="sobre">sobre</a>
+                            <a class="link hover-purple gray dib mr3" href="sobre.html" title="sobre">sobre</a>
                             <a class="link hover-purple gray dib mr3" href="buscar.html" title="buscar">buscar</a>
                             <a class="link hover-purple gray dib mr3" href="mapa.html" title="mapa">mapa</a>
                             <a class="link hover-purple gray dib" href="contato.html" title="contato">contato</a>
@@ -65,10 +65,20 @@
             <h4 class="f6 f5-ns ml5-l ml4-ns mv1 black-60 fw6">entre em contato</h4>
         </header>
 
-        <div class="w-60-ns pa3-ns pa2 pl5 pt4 f5 lh-copy">
-            <div><input id="name" class="georgia ml0-l input-reset ba b--black-20 pa2 mb2 db w-100 mw6" name="filtr-search" data-search placeholder="assunto" type="text"></div>
-            
-            <div><input id="name" class="h5 georgia ml0-l input-reset ba b--black-20 pa2 mb2 db w-100 mw6" name="filtr-search" data-search placeholder="" type="text"></div>
+        <div class="w-60-l w-90-m pa4-ns ml4-l pa3 pl5-l pt4 f5 ">
+            <!--            <div><input id="name" class="georgia ml0-l input-reset ba b--black-20 pa2 mb2 db w-100 mw6" name="filtr-search" data-search placeholder="assunto" type="text"></div>-->
+
+
+
+            <form method="POST" action="https://formspree.io/gabrielhirata@icloud.com">
+                <input class="georgia ml0-l input-reset ba b--black-20 pa2 mb2 db w-100 mw6" type="email" name="email" placeholder="email para contato">
+                <textarea class="h5 georgia ml0-l input-reset ba b--black-20 pa2 mb2 db w-100 mw6" name="message" placeholder="Sua mensagem"></textarea>
+                <button class="button f6 link br1 ba ph2 ph3-ns pv2 w35 tc mb2 dib black-80 b--black-80 mt3 mh2 bg-white " type="submit">Enviar</button>
+            </form>
+
+
+
+            <!--            <div><input id="name" class="h5 georgia ml0-l input-reset ba b--black-20 pa2 mb2 db w-100 mw6" name="filtr-search" data-search placeholder="" type="text"></div>-->
 
 
         </div>
@@ -76,9 +86,13 @@
 
 
     </div>
-    <footer class="footer pa3 bg-black-80 white-30 helvetica h4 mt7-l mt7-ns mt5">
-        <h5 class="ma1 tc fw4">FAU-USP</h5>
-        <h5 class="ma1 tc fw4">2018</h5>
+    <footer class="footer pa3 bg-black-80 white-30 helvetica h4 mt6 mt7-ns">
+        <div class="center mw6">
+            <h5 class="ma1  fw4">Cadernos de Habitação Coletiva - Brasil</h5>
+            <h5 class="ma1  fw4">PC3 -Grupo de Pesquisa Pensamento Crítico e Cidade Contemporânea
+            </h5>
+            <h5 class="ma1  fw4">FAU-USP 2018</h5>
+        </div>
     </footer>
 
 
