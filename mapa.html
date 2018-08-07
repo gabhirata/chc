@@ -300,10 +300,15 @@
                 var markerJapura = new google.maps.Marker({
                     position: japura,
                     map: map,
-                    icon: 'circle-pad-15-2.svg',
+                    icon: 'circle-pad-15-2.png',
                     title: 'Edifício Japurá'
                 });
                 markerJapura.addListener('click', function() {
+                    infowindowMooca.close(map, markerMooca);
+                    infowindowSantacruz.close(map, markerSantacruz);
+                    infowindowVilaguiomar.close(map, markerVilaguiomar);
+                    infowindowNovejulho.close(map, markerNovejulho);
+                    infowindowJapura.close(map, markerJapura);
                     infowindowJapura.open(map, markerJapura);
                 });
 
@@ -314,37 +319,65 @@
                     title: 'Conj. Santa Cruz'
                 });
                 markerSantacruz.addListener('click', function() {
+                    infowindowMooca.close(map, markerMooca);
+                    infowindowSantacruz.close(map, markerSantacruz);
+                    infowindowVilaguiomar.close(map, markerVilaguiomar);
+                    infowindowNovejulho.close(map, markerNovejulho);
+                    infowindowJapura.close(map, markerJapura);
                     infowindowSantacruz.open(map, markerSantacruz);
                 });
 
                 var markerVilaguiomar = new google.maps.Marker({
                     position: vilaguiomar,
                     map: map,
-                    icon: 'circle-pad-15-2.svg',
+                    icon: 'circle-pad-15-2.png',
                     title: 'Conj. Vila Guimar'
                 });
                 markerVilaguiomar.addListener('click', function() {
+                    infowindowMooca.close(map, markerMooca);
+                    infowindowSantacruz.close(map, markerSantacruz);
+                    infowindowVilaguiomar.close(map, markerVilaguiomar);
+                    infowindowNovejulho.close(map, markerNovejulho);
+                    infowindowJapura.close(map, markerJapura);
                     infowindowVilaguiomar.open(map, markerVilaguiomar);
                 });
 
                 var markerNovejulho = new google.maps.Marker({
                     position: novejulho,
                     map: map,
-                    icon: 'circle-pad-15-2.svg',
+                    icon: 'circle-pad-15-2.png',
                     title: 'Conj. Nove de Juhlo'
                 });
                 markerNovejulho.addListener('click', function() {
+                    infowindowMooca.close(map, markerMooca);
+                    infowindowSantacruz.close(map, markerSantacruz);
+                    infowindowVilaguiomar.close(map, markerVilaguiomar);
+                    infowindowNovejulho.close(map, markerNovejulho);
+                    infowindowJapura.close(map, markerJapura);
                     infowindowNovejulho.open(map, markerNovejulho);
                 });
                 
                  var markerMooca = new google.maps.Marker({
                     position: mooca,
                     map: map,
-                    icon: 'circle-pad-15-2.svg',
+                    icon: 'circle-pad-15-2.png',
                     title: 'Conj. da Mooca'
                 });
                 markerMooca.addListener('click', function() {
+                    infowindowMooca.close(map, markerMooca);
+                    infowindowSantacruz.close(map, markerSantacruz);
+                    infowindowVilaguiomar.close(map, markerVilaguiomar);
+                    infowindowNovejulho.close(map, markerNovejulho);
+                    infowindowJapura.close(map, markerJapura);
                     infowindowMooca.open(map, markerMooca);
+                });
+                
+                map.addListener('click',function() {
+                    infowindowMooca.close(map, markerMooca);
+                    infowindowSantacruz.close(map, markerSantacruz);
+                    infowindowVilaguiomar.close(map, markerVilaguiomar);
+                    infowindowNovejulho.close(map, markerNovejulho);
+                    infowindowJapura.close(map, markerJapura);
                 });
             }
 
